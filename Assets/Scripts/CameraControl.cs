@@ -55,11 +55,12 @@ public class CameraControl : MonoBehaviour
             transform.RotateAround(playerTransform.position, Vector3.down, mouseX* rotateSpeed);
             mouseX = Input.GetAxis("Mouse X");
             mouseY = Input.GetAxis("Mouse Y");
-        }
-        if (mainCamera.transform.position.y <= 1.5)
+         if (mainCamera.transform.position.y <= 1.5)
         {
             transform.RotateAround(playerTransform.position, playerTransform.right, -Input.GetAxis("Mouse Y") * rotateSpeed);
         }
+        }
+       
         mainCamera.transform.LookAt(playerTransform.position);
         //cameraOffset = transform.position - playerTransform.position;
 

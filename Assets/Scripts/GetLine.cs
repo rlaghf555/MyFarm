@@ -19,7 +19,8 @@ public class GetLine : MonoBehaviour
     
     public void SetScripts(List<string> value)
     {
-        FindObjectOfType<PlayerInput>().enabled = false;
+        //FindObjectOfType<PlayerInput>().enabled = false;
+        FindObjectOfType<CharacterMoveByJoystick>().enabled = false;
         lines = value;
         linenum = value.Count-1;
         lineOn = 0;
@@ -31,7 +32,9 @@ public class GetLine : MonoBehaviour
         if(lineOn> linenum)
         {
             parent.SetActive(false);
-            FindObjectOfType<PlayerInput>().enabled = true;
+            //FindObjectOfType<PlayerInput>().enabled = true;
+            FindObjectOfType<CharacterMoveByJoystick>().enabled = true;
+
             return;
         }
 

@@ -40,4 +40,9 @@ public class CharacterMoveByJoystick : MonoBehaviour
     {
         playerRigidBody.rotation = playerRigidBody.rotation * Quaternion.Euler(0, fixedJoystick.Horizontal*rotateSpeed, 0f);
     }
+    private void OnDisable()
+    {
+        playerAnimator.SetFloat("Move", 0);
+        cameraControl.CameraBack();
+    }
 }
