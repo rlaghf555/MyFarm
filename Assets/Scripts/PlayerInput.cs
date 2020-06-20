@@ -7,11 +7,15 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour {
     public string moveAxisName = "Vertical"; // 앞뒤 움직임을 위한 입력축 이름
     public string rotateAxisName = "Horizontal"; // 좌우 회전을 위한 입력축 이름
-    public Camera camera;
+    public Camera mainCamera;
     public CameraControl cameraControl;
+    private Animator playerAnimator;
+
     private void Start()
     {
-        cameraControl = camera.GetComponent<CameraControl>();
+        cameraControl = mainCamera.GetComponent<CameraControl>();
+        playerAnimator = GetComponent<Animator>();
+
     }
     // 값 할당은 내부에서만 가능
     public float move { get; private set; } // 감지된 움직임 입력값
@@ -37,5 +41,10 @@ public class PlayerInput : MonoBehaviour {
         move = 0;
         rotate = 0;
         cameraControl.CameraBack();
+    }
+    public void ActButton()
+    {
+        playerAnimator.SetTrigger("Working");
+
     }
 }

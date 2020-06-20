@@ -6,17 +6,24 @@ public class CameraControl : MonoBehaviour
 {
     public Transform playerTransform;
     public Vector3 cameraOffset;
-    private Camera camera;
+    private Camera mainCamera;
     public Transform Camerapos;
     public float rotateSpeed = 10.0f;
     public float zoomSpeed = 10.0f;
     [Range(0.001f, 1.0f)]
     public float SmoothFactor = 0.5f;
+    [HideInInspector]
+    public bool ismove;
+    private float mouseX;
+    private float mouseY;
     // Start is called before the first frame update
     void Start()
     {
-        camera = GetComponent<Camera>();
+        mainCamera = GetComponent<Camera>();
         transform.position = playerTransform.position + cameraOffset;
+        ismove = false;
+        mouseX = Input.GetAxis("Mouse X");
+        mouseY = Input.GetAxis("Mouse Y");
     }
 
     // Update is called once per frame
@@ -24,7 +31,6 @@ public class CameraControl : MonoBehaviour
     {
         Zoom();
         Rotate();
-
     }
     private void Follow()
     {
@@ -37,23 +43,24 @@ public class CameraControl : MonoBehaviour
         float distance = Input.GetAxis("Mouse ScrollWheel") * -1 * zoomSpeed;
         if (distance != 0)
         {
-            camera.fieldOfView += distance;
+            mainCamera.fieldOfView += distance;
         }
     }
     private void Rotate()
     {
-        if (Input.GetMouseButton(1))
-        {          
-            
-            transform.RotateAround(playerTransform.position, playerTransform.right, Input.GetAxis("Mouse Y") * rotateSpeed);
-            transform.RotateAround(playerTransform.position, Vector3.down, Input.GetAxis("Mouse X") * rotateSpeed);
-            if (camera.transform.position.y <= 1.5)
-            {
-                transform.RotateAround(playerTransform.position, playerTransform.right, -Input.GetAxis("Mouse Y") * rotateSpeed);
-
-            }
+        if (Input.GetMouseButton(0)&&!ismove)
+        {
+           
+            transform.RotateAround(playerTransform.position, playerTransform.right, mouseY * rotateSpeed);
+            transform.RotateAround(playerTransform.position, Vector3.down, mouseX* rotateSpeed);
+            mouseX = Input.GetAxis("Mouse X");
+            mouseY = Input.GetAxis("Mouse Y");
         }
-        camera.transform.LookAt(playerTransform.position);
+        if (mainCamera.transform.position.y <= 1.5)
+        {
+            transform.RotateAround(playerTransform.position, playerTransform.right, -Input.GetAxis("Mouse Y") * rotateSpeed);
+        }
+        mainCamera.transform.LookAt(playerTransform.position);
         //cameraOffset = transform.position - playerTransform.position;
 
     }

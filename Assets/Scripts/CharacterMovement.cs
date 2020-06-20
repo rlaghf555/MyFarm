@@ -16,7 +16,7 @@ public class CharacterMovement : MonoBehaviour
     public Transform objectPivot;
     public Transform leftHandMount;
     public Transform RightHandMount;
-    private bool dig;
+   // private bool dig;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class CharacterMovement : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
         playerRigidbody = GetComponent<Rigidbody>();
-        dig = false;
+        //dig = false;
     }
 
     // Update is called once per frame
@@ -53,11 +53,11 @@ public class CharacterMovement : MonoBehaviour
             playerAnimator.SetBool("Walking", false);
         }
         */
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerAnimator.SetTrigger("Digging");
-            dig = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    playerAnimator.SetTrigger("Digging");
+        //    dig = true;
+        //}
     }
 
     private void FixedUpdate()
@@ -90,14 +90,14 @@ public class CharacterMovement : MonoBehaviour
     }
     private void OnAnimatorIK(int layerIndex)
     {
-        if (!dig)
-            return;
-        objectPivot.position = playerAnimator.GetIKHintPosition(AvatarIKHint.RightElbow);
-      playerAnimator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1.0f);
-      playerAnimator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1.0f);
-      
-      playerAnimator.SetIKPosition(AvatarIKGoal.LeftHand, leftHandMount.position);
-      playerAnimator.SetIKRotation(AvatarIKGoal.LeftHand, leftHandMount.rotation);
+      //  if (!dig)
+      //      return;
+      //  objectPivot.position = playerAnimator.GetIKHintPosition(AvatarIKHint.RightElbow);
+      //playerAnimator.SetIKPositionWeight(AvatarIKGoal.LeftHand, 1.0f);
+      //playerAnimator.SetIKRotationWeight(AvatarIKGoal.LeftHand, 1.0f);
+      //
+      //playerAnimator.SetIKPosition(AvatarIKGoal.LeftHand, leftHandMount.position);
+      //playerAnimator.SetIKRotation(AvatarIKGoal.LeftHand, leftHandMount.rotation);
 
        //playerAnimator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1.0f);
        //playerAnimator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1.0f);
