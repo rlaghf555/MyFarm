@@ -17,6 +17,7 @@ public class CharacterMoveByJoystick : MonoBehaviour
         playerAnimator = player.GetComponent<Animator>();
         playerRigidBody = player.GetComponent<Rigidbody>();
         cameraControl = mainCamera.GetComponent<CameraControl>();
+        //fixedJoystick = FindObjectOfType<FixedJoystick>();
     }
     public void FixedUpdate()
     {

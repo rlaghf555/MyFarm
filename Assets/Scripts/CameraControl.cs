@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraControl : MonoBehaviour
 {
     public Transform playerTransform;
+    public Transform lookat;
     public Vector3 cameraOffset;
     private Camera mainCamera;
     public Transform Camerapos;
@@ -51,17 +52,18 @@ public class CameraControl : MonoBehaviour
         if (Input.GetMouseButton(0)&&!ismove)
         {
            
-            transform.RotateAround(playerTransform.position, playerTransform.right, mouseY * rotateSpeed);
-            transform.RotateAround(playerTransform.position, Vector3.down, mouseX* rotateSpeed);
-            mouseX = Input.GetAxis("Mouse X");
-            mouseY = Input.GetAxis("Mouse Y");
+            transform.RotateAround(lookat.position, playerTransform.right, mouseY * rotateSpeed);
          if (mainCamera.transform.position.y <= 1.5)
         {
-            transform.RotateAround(playerTransform.position, playerTransform.right, -Input.GetAxis("Mouse Y") * rotateSpeed);
-        }
+                transform.RotateAround(lookat.position, playerTransform.right, -mouseY * rotateSpeed);
+
+            }
+            transform.RotateAround(lookat.position, Vector3.down, mouseX* rotateSpeed);
+            mouseX = Input.GetAxis("Mouse X");
+            mouseY = Input.GetAxis("Mouse Y");
         }
        
-        mainCamera.transform.LookAt(playerTransform.position);
+        mainCamera.transform.LookAt(lookat.position);
         //cameraOffset = transform.position - playerTransform.position;
 
     }

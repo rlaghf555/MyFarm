@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour {
     public string moveAxisName = "Vertical"; // 앞뒤 움직임을 위한 입력축 이름
     public string rotateAxisName = "Horizontal"; // 좌우 회전을 위한 입력축 이름
     public Camera mainCamera;
+    [HideInInspector]
     public CameraControl cameraControl;
     private Animator playerAnimator;
 
