@@ -45,6 +45,7 @@ public class PlayerInput : MonoBehaviour {
     }
     public void ActButton()
     {
+        
         playerAnimator.SetTrigger("Working");
 
     }
