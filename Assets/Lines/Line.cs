@@ -6,16 +6,16 @@ public class Line : MonoBehaviour
 {
 
     public List<string> lines;
-    public GetLine getline;
+    protected GetLine getline;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        getline = FindObjectOfType<GameController>().ui_script;
     }
     public virtual void SetScripts()
     {
-
+        getline.SetScripts(lines);
     }
     
 

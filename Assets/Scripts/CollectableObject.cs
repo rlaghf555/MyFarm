@@ -25,6 +25,7 @@ public class CollectableObject : MonoBehaviour
         if(other.tag == "Player")
         {
             FindObjectOfType<GameController>().SetActButton(collectableType);
+            FindObjectOfType<GameController>().SetTryObject(gameObject);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -32,6 +33,18 @@ public class CollectableObject : MonoBehaviour
         if (other.tag == "Player")
         {
             FindObjectOfType<GameController>().DisableActButton();
+            FindObjectOfType<GameController>().ReleaseTryObject();
+        }
+    }
+    public void Try()
+    {
+        trytime--;
+        if (trytime == 0)
+        {
+            Debug.Log(gameObject.name+" Trytime: " + trytime);
+            //collectable object 획득
+
+            Destroy(gameObject);
         }
     }
 }

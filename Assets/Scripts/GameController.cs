@@ -13,6 +13,8 @@ public class GameController : MonoBehaviour
     public Transform character;
     public GameObject axeButton;
     public GameObject spadeButton;
+    public GetLine ui_script;
+    private GameObject collectableObject;
     private ACT_BUTTON_STATE actButtonState;
     // Start is called before the first frame update
     void Start()
@@ -50,5 +52,17 @@ public class GameController : MonoBehaviour
         actButtonState = ACT_BUTTON_STATE.DISABLE;
         axeButton.SetActive(false);
         spadeButton.SetActive(false);
+    }
+    public void SetTryObject(GameObject gameObject)
+    {
+        collectableObject = gameObject;
+    }
+    public void ReleaseTryObject()
+    {
+        collectableObject = null;
+    }
+    public void Try()
+    {
+        collectableObject.GetComponent<CollectableObject>().Try();
     }
 }

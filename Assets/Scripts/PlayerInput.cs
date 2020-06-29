@@ -43,10 +43,16 @@ public class PlayerInput : MonoBehaviour {
         rotate = 0;
         cameraControl.CameraBack();
     }
-    public void ActButton()
+    public void Axe_Button()
     {
         
-        playerAnimator.SetTrigger("Working");
+        playerAnimator.SetTrigger("Ax");
+
+    } 
+    public void Spade_Button()
+    {
+        
+        playerAnimator.SetTrigger("Digging");
 
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3947749259349609845}
   - component: {fileID: 3935353308981326650}
   - component: {fileID: 3935353308981326653}
+  - component: {fileID: 1164504498}
   m_Layer: 0
   m_Name: CollectableRock
   m_TagString: Collectable
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3935011984296228021}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 31.42767, y: -0.02, z: 14.090151}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
@@ -108,3 +109,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableType: 1
   trytime: 2
+--- !u!114 &1164504498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3935011984296228021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87241eb0bc176144aa4c3cdcb9a3729e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - "\uC870\uADF8\uB9C8\uD55C \uB3CC\uC774\uB2E4. \uD30C\uB0B4\uC9C0 \uC54A\uC73C\uBA74
+    \uC774 \uB545\uC744 \uC0AC\uC6A9\uD560\uC218 \uC5C6\uB2E4."
+  getline: {fileID: 0}

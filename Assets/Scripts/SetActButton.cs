@@ -12,7 +12,7 @@ public class SetActButton : MonoBehaviour
         button = GetComponent<Button>();
         PlayerInput playerInput = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInput>();
 
-        button.onClick.AddListener(() => { playerInput.ActButton(); });
+       // button.onClick.AddListener(() => { playerInput.ActButton(); });
     }
 
     // Update is called once per frame
