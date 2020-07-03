@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +22,7 @@ public class GetLine : MonoBehaviour
     {
         //FindObjectOfType<PlayerInput>().enabled = false;
         FindObjectOfType<CharacterMoveByJoystick>().enabled = false;
-        lines = value;
+        lines = value.ToList<string>();
         linenum = value.Count-1;
         lineOn = 0;
         text.text = value[lineOn];
@@ -34,7 +35,7 @@ public class GetLine : MonoBehaviour
             parent.SetActive(false);
             //FindObjectOfType<PlayerInput>().enabled = true;
             FindObjectOfType<CharacterMoveByJoystick>().enabled = true;
-
+            lines.Clear();
             return;
         }
 

@@ -7,7 +7,7 @@ public class CharacterCollider : MonoBehaviour
     [HideInInspector]
     public GameObject colGameObject;
     public GameObject lines;
-
+    public GameObject openScriptButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +26,17 @@ public class CharacterCollider : MonoBehaviour
         {
             OpenScript();
         }
+        if(colGameObject.tag == "NPC"||colGameObject.tag == "Collectable")
+        {
+            openScriptButton.SetActive(true);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
+        if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable")
+        {
+            openScriptButton.SetActive(false);
+        }
         colGameObject = null;
     }
     public void OpenScript()

@@ -39950,6 +39950,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnpos: {fileID: 1120590556}
   character: {fileID: 204137276}
+  axeButton: {fileID: 0}
+  spadeButton: {fileID: 0}
+  ui_script: {fileID: 0}
 --- !u!4 &1094332772
 Transform:
   m_ObjectHideFlags: 0
@@ -39962,7 +39965,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1097934569
 GameObject:
@@ -40615,7 +40618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1120894601
 GameObject:
@@ -56148,7 +56151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4319554799398028, guid: ff8280a9b51d9044b8d66335890d1310, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.889368
+      value: 12.87
       objectReference: {fileID: 0}
     - target: {fileID: 4319554799398028, guid: ff8280a9b51d9044b8d66335890d1310, type: 3}
       propertyPath: m_LocalPosition.y
@@ -56156,7 +56159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4319554799398028, guid: ff8280a9b51d9044b8d66335890d1310, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5589892
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4319554799398028, guid: ff8280a9b51d9044b8d66335890d1310, type: 3}
       propertyPath: m_LocalRotation.x

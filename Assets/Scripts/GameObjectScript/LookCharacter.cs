@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotator : MonoBehaviour
+public class LookCharacter : MonoBehaviour
 {
-    public float Power;
+    public Transform character;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,8 +12,11 @@ public class Rotator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.Rotate(0, 0, -Power*Time.deltaTime);
+        Vector3 newVector = character.position;
+        newVector.y = transform.position.y;
+        transform.LookAt(newVector);
+
     }
 }

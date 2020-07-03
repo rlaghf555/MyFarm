@@ -9,6 +9,7 @@ TagManager:
   - Hill
   - Collectable
   - Portal
+  - NPC
   layers:
   - Default
   - TransparentFX
