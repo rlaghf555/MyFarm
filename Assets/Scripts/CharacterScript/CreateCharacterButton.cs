@@ -7,6 +7,7 @@ public class CreateCharacterButton : MonoBehaviour
     // Start is called before the first frame update
     public MenuController menuController;
     public CharacterCreator characterCreator;
+    public GameObject createPanel;
     public string filename;
     private void OnMouseDown()
     {
@@ -25,6 +26,7 @@ public class CreateCharacterButton : MonoBehaviour
             {
                 menuController.SetCameraPosToCharacterCreatePos();
                 characterCreator.filename = filename;
+                createPanel.SetActive(true);
             }
 
         }

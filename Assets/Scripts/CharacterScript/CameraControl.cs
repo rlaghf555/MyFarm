@@ -49,12 +49,20 @@ public class CameraControl : MonoBehaviour
     }
     private void Rotate()
     {
+
+        if (Input.touchCount >0&&ismove)
+        {
+            transform.RotateAround(lookat.position, Vector3.down, Input.GetTouch(0).deltaPosition.x * rotateSpeed);
+            transform.RotateAround(lookat.position, playerTransform.right, Input.GetTouch(0).deltaPosition.y * rotateSpeed);
+        }
+
+        /*
         if (Input.GetMouseButton(0)&&!ismove)
         {
            
             transform.RotateAround(lookat.position, playerTransform.right, mouseY * rotateSpeed);
-         if (mainCamera.transform.position.y <= 1.5)
-        {
+            if (mainCamera.transform.position.y <= 1.5)
+            {
                 transform.RotateAround(lookat.position, playerTransform.right, -mouseY * rotateSpeed);
 
             }
@@ -62,7 +70,7 @@ public class CameraControl : MonoBehaviour
             mouseX = Input.GetAxis("Mouse X");
             mouseY = Input.GetAxis("Mouse Y");
         }
-       
+       */
         mainCamera.transform.LookAt(lookat.position);
         //cameraOffset = transform.position - playerTransform.position;
 

@@ -31,7 +31,7 @@ public class CharacterCreator : MonoBehaviour
     public void OnheadIndexPlus()
     {
         onHeadIndex++;
-        if (onHeadIndex > onHead.Length-1)
+        if (onHeadIndex == onHead.Length)
             onHeadIndex = 0;
         SetCharacter();
     }
@@ -52,15 +52,15 @@ public class CharacterCreator : MonoBehaviour
     }
     public void CharacterMeshIndexMinus()
     {
-        characterMeshIndex--;
+        characterMeshIndex-=1;
         if (characterMeshIndex == -1)
-            characterMeshIndex = characterMesh.Length;
+            characterMeshIndex = characterMesh.Length-1;
         SetCharacter();
     }
     public void MaterialIndexIndexPlus()
     {
         materialIndex++;
-        if (materialIndex == materials.Length-1)
+        if (materialIndex == materials.Length)
             materialIndex = 0;
         SetCharacter();
     }
@@ -77,13 +77,14 @@ public class CharacterCreator : MonoBehaviour
         {
             onHead[i].SetActive(false);
         }
-        if(onHeadIndex!=0)
-            onHead[onHeadIndex].SetActive(true);
+        
         for (int i = 0; i < characterMesh.Length; i++)
         {
             characterMesh[i].SetActive(false);
         }
-        Debug.Log(characterMeshIndex);
+        if (onHeadIndex != 0)
+            onHead[onHeadIndex].SetActive(true);
+        
         characterMesh[characterMeshIndex].SetActive(true);
 
         characterMesh[characterMeshIndex].GetComponent<SkinnedMeshRenderer>().material = materials[materialIndex];

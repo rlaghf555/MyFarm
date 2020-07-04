@@ -13,10 +13,11 @@ public class MenuCharacter : MonoBehaviour
     public int characterMeshIndex;
     public int materialIndex;
     public GameObject createCharacterButton;
+    public GameObject openSceneButton;
     // Start is called before the first frame update
     void Start()
     {
-      
+        Load();
 
     }
 
@@ -34,6 +35,7 @@ public class MenuCharacter : MonoBehaviour
         }
         else
         {
+            Debug.Log(filename + "로드 완료");
             onHeadIndex = saveData.onHead;
             characterMeshIndex = saveData.characterMesh;
             materialIndex = saveData.characterMaterial;
@@ -42,6 +44,8 @@ public class MenuCharacter : MonoBehaviour
             characterMesh[characterMeshIndex].SetActive(true);
             characterMesh[characterMeshIndex].GetComponent<SkinnedMeshRenderer>().material = materials[materialIndex];
             createCharacterButton.SetActive(false);
+            openSceneButton.SetActive(true);
+            openSceneButton.GetComponent<OpenSceneButton>().savedata = saveData;
         }
     }
 }

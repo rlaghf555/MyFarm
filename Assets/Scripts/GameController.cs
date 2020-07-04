@@ -13,16 +13,19 @@ public class GameController : MonoBehaviour
     public Transform character;
     public GameObject axeButton;
     public GameObject spadeButton;
+    public GameObject loadingScreen;
     public GetLine ui_script;
+    public CharacterSetting characterSetting;
     private GameObject collectableObject;
     private ACT_BUTTON_STATE actButtonState;
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {        
         character.transform.position = spawnpos.position;
         character.rotation = spawnpos.rotation;
         actButtonState = ACT_BUTTON_STATE.DISABLE;
+        characterSetting.SetCharacter();
+        loadingScreen.SetActive(false);
     }
 
     // Update is called once per frame
