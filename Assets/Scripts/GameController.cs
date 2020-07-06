@@ -21,11 +21,16 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {        
+       
+    }
+    private void Awake()
+    {
         character.transform.position = spawnpos.position;
         character.rotation = spawnpos.rotation;
         actButtonState = ACT_BUTTON_STATE.DISABLE;
         characterSetting.SetCharacter();
         loadingScreen.SetActive(false);
+
     }
 
     // Update is called once per frame

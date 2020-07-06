@@ -7,6 +7,7 @@ public class CharacterMoveByJoystick : MonoBehaviour
     public float moveSpeed;
     public float rotateSpeed;
     public FixedJoystick fixedJoystick;
+    public FloatingJoystick floatingJoystick;
     private Rigidbody playerRigidBody;
     public Transform player;
     private Animator playerAnimator;
@@ -21,8 +22,8 @@ public class CharacterMoveByJoystick : MonoBehaviour
     }
     public void FixedUpdate()
     {
-        Rotate();
-        Move();
+        RotateF();
+        MoveF();
     }
     private void Move()
     {
@@ -37,9 +38,26 @@ public class CharacterMoveByJoystick : MonoBehaviour
         }
         else cameraControl.ismove = false;
     }
+    private void MoveF()
+    {
+        Vector3 moveDistance =
+           floatingJoystick.Vertical * transform.forward * moveSpeed * Time.deltaTime;
+        playerRigidBody.MovePosition(playerRigidBody.position + moveDistance);
+        playerAnimator.SetFloat("Move", floatingJoystick.Vertical);
+        if (floatingJoystick.Vertical != 0)
+        {
+            cameraControl.CameraBack();
+            cameraControl.ismove = true;
+        }
+        else cameraControl.ismove = false;
+    }
     private void Rotate()
     {
         playerRigidBody.rotation = playerRigidBody.rotation * Quaternion.Euler(0, fixedJoystick.Horizontal*rotateSpeed, 0f);
+    }
+    private void RotateF()
+    {
+        playerRigidBody.rotation = playerRigidBody.rotation * Quaternion.Euler(0, floatingJoystick.Horizontal * rotateSpeed, 0f);
     }
     private void OnDisable()
     {

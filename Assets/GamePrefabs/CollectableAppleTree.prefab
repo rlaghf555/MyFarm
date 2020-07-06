@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 591114029861669149}
   - component: {fileID: 591114029861669148}
   - component: {fileID: 591114029861669138}
+  - component: {fileID: 163522893156749853}
   m_Layer: 0
-  m_Name: SM_Env_Tree_Apple_01
+  m_Name: CollectableAppleTree
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122,3 +123,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectableType: 0
   trytime: 3
+--- !u!114 &163522893156749853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590496102733401391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87241eb0bc176144aa4c3cdcb9a3729e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - "\uC5F4\uB9E4\uB97C \uB9FA\uC9C0 \uC54A\uC740 \uC0AC\uACFC\uB098\uBB34\uB2E4"
