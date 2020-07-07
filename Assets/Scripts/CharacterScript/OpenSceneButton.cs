@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class OpenSceneButton : MonoBehaviour
 {
-    public string scenename;
     public SaveData savedata;
+    public GameObject levelLoader;
     // Start is called before the first frame update
 
     private void OnMouseDown()
@@ -24,10 +24,9 @@ public class OpenSceneButton : MonoBehaviour
 
             if (hit.collider == this.GetComponent<BoxCollider>())
             {
-                GetComponent<LevelLoader>().LoadLevel(scenename);
-                GameObject newgameObject = GameObject.FindGameObjectWithTag("Data");
-                newgameObject.GetComponent<CharacterData>().inGameData = savedata;
-                DontDestroyOnLoad(newgameObject);
+                levelLoader.GetComponent<LevelLoader>().SetSaveData(savedata);
+                levelLoader.GetComponent<LevelLoader>().LoadLevel();
+                
             }
 
         }

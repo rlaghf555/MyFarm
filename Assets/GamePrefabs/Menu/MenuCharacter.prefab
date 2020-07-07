@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4118421905585534373}
   - component: {fileID: 3714147452417138950}
   - component: {fileID: 9010546563402962821}
-  - component: {fileID: 2312453430498168905}
   m_Layer: 0
   m_Name: OpenSceneButton
   m_TagString: Untagged
@@ -104,20 +103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenename: MyFarm
---- !u!114 &2312453430498168905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4284352238109013913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2eeadd7755c3fb45af1f68c3812645a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadingscreen: {fileID: 0}
-  slider: {fileID: 0}
+  savedata:
+    onHead: 0
+    characterMesh: 0
+    characterMaterial: 0
+  levelLoader: {fileID: 0}
 --- !u!1 &7415198623909608953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,15 +2685,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59607cf23fbe18f4196263a6931d7223, type: 3}
---- !u!1 &5682776035890465973 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1520169474670594, guid: 59607cf23fbe18f4196263a6931d7223,
-    type: 3}
-  m_PrefabInstance: {fileID: 5681326269536652471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5677123528205878669 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4804732810594618, guid: 59607cf23fbe18f4196263a6931d7223,
+    type: 3}
+  m_PrefabInstance: {fileID: 5681326269536652471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5682776035890465973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1520169474670594, guid: 59607cf23fbe18f4196263a6931d7223,
     type: 3}
   m_PrefabInstance: {fileID: 5681326269536652471}
   m_PrefabAsset: {fileID: 0}

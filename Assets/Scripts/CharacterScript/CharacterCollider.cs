@@ -26,15 +26,17 @@ public class CharacterCollider : MonoBehaviour
         {
             OpenScript();
         }
-        if(colGameObject.tag == "NPC"||colGameObject.tag == "Collectable")
+        if(colGameObject.tag == "NPC"||colGameObject.tag == "Collectable"||colGameObject.tag=="Sign")
         {
             openScriptButton.SetActive(true);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable")
+        if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable" || colGameObject.tag == "Sign")
         {
+
+            
             openScriptButton.SetActive(false);
         }
         colGameObject = null;
@@ -43,5 +45,18 @@ public class CharacterCollider : MonoBehaviour
     {
         lines.SetActive(true);
         colGameObject.GetComponent<Line>().SetScripts(); ;
+        if(colGameObject.tag == "NPC")
+        {
+            colGameObject.GetComponent<Animator>().SetTrigger("Talk_Start");
+            colGameObject.GetComponent<LookCharacter>().enabled = true;
+        }
+    }
+    public void EndScript()
+    {
+        if (colGameObject.tag == "NPC")
+        {
+            colGameObject.GetComponent<Animator>().SetTrigger("Talk_End");
+            colGameObject.GetComponent<LookCharacter>().enabled = false;
+        }
     }
 }

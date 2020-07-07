@@ -11,13 +11,11 @@ public class GetLine : MonoBehaviour
     private int linenum;
     private int lineOn;
     public Text text;
-
+    public CharacterCollider characterCollider;
     // Start is called before the first frame update
 
-    void Start()
-    {
-    }
-    
+
+
     public void SetScripts(List<string> value)
     {
         //FindObjectOfType<PlayerInput>().enabled = false;
@@ -35,6 +33,7 @@ public class GetLine : MonoBehaviour
             parent.SetActive(false);
             //FindObjectOfType<PlayerInput>().enabled = true;
             FindObjectOfType<CharacterMoveByJoystick>().enabled = true;
+            characterCollider.EndScript();
             lines.Clear();
             return;
         }

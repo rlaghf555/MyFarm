@@ -7,10 +7,23 @@ public class LevelLoader : MonoBehaviour
 {
     public GameObject loadingscreen;
     public Slider slider;
+    public string scenename;
+    public SaveData saveData;
     public void LoadLevel(string scenename)
     {
-        loadingscreen.SetActive(true);
-        StartCoroutine(LoadAsynchronously(scenename));
+        this.scenename = scenename;
+        LoadLevel();
+    }
+    public void LoadLevel()
+    {
+        GetComponent<Animator>().SetTrigger("Fade_Out");
+        GameObject newgameObject = GameObject.FindGameObjectWithTag("Data");
+        newgameObject.GetComponent<CharacterData>().inGameData = saveData;
+        DontDestroyOnLoad(newgameObject);
+    }
+    public void SetSaveData(SaveData data)
+    {
+        saveData = data;
     }
     IEnumerator LoadAsynchronously(string scenename)
     {
@@ -22,5 +35,11 @@ public class LevelLoader : MonoBehaviour
             slider.value = progress;
             yield return null;
         }
+    }
+    public void OnFadeComplete()
+    {
+        //loadingscreen.SetActive(true);
+       // StartCoroutine(LoadAsynchronously(scenename));
+        SceneManager.LoadScene(scenename);
     }
 }
