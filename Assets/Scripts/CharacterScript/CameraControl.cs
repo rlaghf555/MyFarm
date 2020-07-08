@@ -9,6 +9,8 @@ public class CameraControl : MonoBehaviour
     public Vector3 cameraOffset;
     private Camera mainCamera;
     public Transform Camerapos;
+    public RectTransform cameraInputPos;
+    public Canvas canvas;
     public float rotateSpeed = 10.0f;
     public float zoomSpeed = 10.0f;
     [Range(0.001f, 1.0f)]
@@ -50,29 +52,67 @@ public class CameraControl : MonoBehaviour
     private void Rotate()
     {
 
-        if (Input.touchCount >0&&ismove)
+        if (Input.touchCount >0&&!ismove)
         {
-            transform.RotateAround(lookat.position, Vector3.down, Input.GetTouch(0).deltaPosition.x * rotateSpeed);
-            transform.RotateAround(lookat.position, playerTransform.right, Input.GetTouch(0).deltaPosition.y * rotateSpeed);
-        }
+            Debug.Log("Input");
+            Ray2D ray = new Ray2D(Input.GetTouch(0).position, Vector2.zero);
 
-        /*
-        if (Input.GetMouseButton(0)&&!ismove)
-        {
-           
-            transform.RotateAround(lookat.position, playerTransform.right, mouseY * rotateSpeed);
-            if (mainCamera.transform.position.y <= 1.5)
+            RaycastHit2D hitInfo = Physics2D.Raycast(ray.origin,ray.direction);
+            // RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
+            if (hitInfo.collider!=null)
             {
-                transform.RotateAround(lookat.position, playerTransform.right, -mouseY * rotateSpeed);
+                if (hitInfo.collider.tag == "CameraTouch")
+                {
 
+                    transform.RotateAround(lookat.position, Vector3.down, Input.GetTouch(0).deltaPosition.x * rotateSpeed*0.1f);
+                    transform.RotateAround(lookat.position, playerTransform.right, Input.GetTouch(0).deltaPosition.y * rotateSpeed*0.1f);
+                    if (mainCamera.transform.position.y <= 1.5)
+                    {
+                        transform.RotateAround(lookat.position, playerTransform.right, -Input.GetTouch(0).deltaPosition.y * rotateSpeed * 0.1f);
+
+                    }
+                }
+                // Here you can check hitInfo to see which collider has been hit, and act appropriately.
             }
-            transform.RotateAround(lookat.position, Vector3.down, mouseX* rotateSpeed);
-            mouseX = Input.GetAxis("Mouse X");
-            mouseY = Input.GetAxis("Mouse Y");
+            mainCamera.transform.LookAt(lookat.position);
+
+            return;
+
         }
-       */
+
+        if (Input.GetMouseButton(0) && !ismove)
+        {
+
+            Ray2D ray = new Ray2D(Input.mousePosition,Vector2.zero);
+
+            RaycastHit2D hitInfo = Physics2D.Raycast(ray.origin, ray.direction);
+            // RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
+            if (hitInfo.collider != null)
+            {
+                Debug.Log("InputMM");
+
+                if (hitInfo.collider.tag == "CameraTouch")
+                {
+                    Debug.Log("InputMM");
+
+                    transform.RotateAround(lookat.position, Vector3.down, -mouseX * rotateSpeed);
+                    transform.RotateAround(lookat.position, playerTransform.right, -mouseY * rotateSpeed);
+                    if (mainCamera.transform.position.y <= 1.5)
+                    {
+                        transform.RotateAround(lookat.position, playerTransform.right, mouseY * rotateSpeed);
+
+                    }
+                }
+                mouseX = Input.GetAxis("Mouse X");
+                mouseY = Input.GetAxis("Mouse Y");
+            }
+
+
+
+        }
         mainCamera.transform.LookAt(lookat.position);
-        //cameraOffset = transform.position - playerTransform.position;
+
+
 
     }
     public void CameraBack()

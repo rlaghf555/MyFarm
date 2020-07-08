@@ -12,6 +12,7 @@ TagManager:
   - NPC
   - Data
   - Sign
+  - CameraTouch
   layers:
   - Default
   - TransparentFX
