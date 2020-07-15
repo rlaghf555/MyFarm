@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour
         character.rotation = spawnpos.rotation;
         actButtonState = ACT_BUTTON_STATE.DISABLE;
         characterSetting.SetCharacter();
-        loadingScreen.SetActive(false);
+        //loadingScreen.SetActive(false);
 
     }
 

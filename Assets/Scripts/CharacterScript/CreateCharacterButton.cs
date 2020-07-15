@@ -26,7 +26,7 @@ public class CreateCharacterButton : MonoBehaviour
             {
                 menuController.SetCameraPosToCharacterCreatePos();
                 characterCreator.filename = filename;
-                createPanel.SetActive(true);
+                //createPanel.SetActive(true);
             }
 
         }

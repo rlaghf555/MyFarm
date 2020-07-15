@@ -1375,6 +1375,8 @@ MonoBehaviour:
   lookat: {fileID: 1341118491}
   cameraOffset: {x: -9, y: 2, z: 0}
   Camerapos: {fileID: 1483975107706380207}
+  cameraInputPos: {fileID: 0}
+  canvas: {fileID: 0}
   rotateSpeed: 0.5
   zoomSpeed: 2
   SmoothFactor: 0.035
@@ -1635,7 +1637,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.32
-  m_Height: 1.75
+  m_Height: 1.56
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &1483975107086210332

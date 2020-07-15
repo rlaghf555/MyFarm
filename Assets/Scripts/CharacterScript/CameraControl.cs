@@ -54,7 +54,6 @@ public class CameraControl : MonoBehaviour
 
         if (Input.touchCount >0&&!ismove)
         {
-            Debug.Log("Input");
             Ray2D ray = new Ray2D(Input.GetTouch(0).position, Vector2.zero);
 
             RaycastHit2D hitInfo = Physics2D.Raycast(ray.origin,ray.direction);
@@ -89,11 +88,9 @@ public class CameraControl : MonoBehaviour
             // RaycastHit2D can be either true or null, but has an implicit conversion to bool, so we can use it like this
             if (hitInfo.collider != null)
             {
-                Debug.Log("InputMM");
 
                 if (hitInfo.collider.tag == "CameraTouch")
                 {
-                    Debug.Log("InputMM");
 
                     transform.RotateAround(lookat.position, Vector3.down, -mouseX * rotateSpeed);
                     transform.RotateAround(lookat.position, playerTransform.right, -mouseY * rotateSpeed);

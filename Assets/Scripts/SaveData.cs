@@ -16,4 +16,5 @@ public class SaveData
     public int onHead;
     public int characterMesh;
     public int characterMaterial;
+    //public UI_ITEM_INFO[] items = new UI_ITEM_INFO[50]; 
 }
