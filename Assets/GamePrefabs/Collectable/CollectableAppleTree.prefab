@@ -15,12 +15,13 @@ GameObject:
   - component: {fileID: 591114029861669148}
   - component: {fileID: 591114029861669138}
   - component: {fileID: 163522893156749853}
+  - component: {fileID: -1298335456224102379}
   m_Layer: 0
   m_Name: CollectableAppleTree
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &593313069810496973
 Transform:
@@ -137,3 +138,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - "\uC5F4\uB9E4\uB97C \uB9FA\uC9C0 \uC54A\uC740 \uC0AC\uACFC\uB098\uBB34\uB2E4"
+--- !u!114 &-1298335456224102379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590496102733401391}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0, b: 0, a: 1}
+  outlineWidth: 8
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []

@@ -13,6 +13,7 @@ TagManager:
   - Data
   - Sign
   - CameraTouch
+  - CameraTouch2
   layers:
   - Default
   - TransparentFX

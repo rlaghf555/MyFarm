@@ -47,4 +47,12 @@ public class CollectableObject : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void Selected()
+    {
+        GetComponent<Outline>().enabled = true;
+    }
+    public void UnSelected()
+    {
+        GetComponent<Outline>().enabled = false;
+    }
 }

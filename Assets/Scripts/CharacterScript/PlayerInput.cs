@@ -55,4 +55,8 @@ public class PlayerInput : MonoBehaviour {
         playerAnimator.SetTrigger("Digging");
 
     }
+    public void Farm_Button()
+    {
+
+    }
 }
