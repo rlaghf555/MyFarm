@@ -13,7 +13,8 @@ public class Farming_Camera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.SetPositionAndRotation(Camerapos.position, Camerapos.rotation);
+
     }
 
     // Update is called once per frame
@@ -92,6 +93,5 @@ public class Farming_Camera : MonoBehaviour
 
     private void OnEnable()
     {
-        transform.SetPositionAndRotation(Camerapos.position, Camerapos.rotation);
     }
 }

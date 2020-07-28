@@ -15,13 +15,13 @@ public class UI_Item : MonoBehaviour
     private TextMesh Item_Text;
     public TextMesh t_num;
     public int i_num;
-
+    public ITEM_PLANT_TYPE item_plant_type;
     public void SetItemInfo()
     {
         Item_Text = GameObject.Find("Item Text").GetComponent<TextMesh>();
         Item_Name = GameObject.Find("Item Name").GetComponent<TextMesh>();
-        Item_Name.text = Kor_Name;
         Item_Text.text = Kor_Text;
+        Item_Name.text = Kor_Name;
     }
     public void UseItem()
     {
@@ -31,5 +31,12 @@ public class UI_Item : MonoBehaviour
     public void SetNumText()
     {
         t_num.text = "X" + i_num.ToString();
+    }
+    public void SetPlantInfo()
+    {
+
+        GameObject.Find("Build Name").GetComponent<Text>().text = Kor_Name;
+        GameObject.Find("Build Text").GetComponent<Text>().text = Kor_Text;
+
     }
 }

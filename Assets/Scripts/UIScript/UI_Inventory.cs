@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum UI_ITEM_PLANT_TYPE
+public enum ITEM_PLANT_TYPE
 {
     NULL,APPLE,APRICOT,ASPARAGUS,BANANA,BEAN,BEETROOT,BROCCOLI,
     CABBAGE,CARROT,CHERRY,CHILLI,CORN,CUCUMBER,EGGPLANT,LEMON,
@@ -13,12 +13,12 @@ public enum UI_ITEM_PLANT_TYPE
 [System.Serializable]
 public class UI_ITEM_PLANT_INFO
 {
-    public UI_ITEM_PLANT_TYPE itemType = UI_ITEM_PLANT_TYPE.NULL;
+    public ITEM_PLANT_TYPE itemType = ITEM_PLANT_TYPE.NULL;
     public int num = 0;
 }
 public class UI_Inventory : MonoBehaviour
 {
-    public UI_ITEM_PLANT_INFO[] inventory_Items_Plants = new UI_ITEM_PLANT_INFO[(int)UI_ITEM_PLANT_TYPE.WATERMELON];
+    public UI_ITEM_PLANT_INFO[] inventory_Items_Plants = new UI_ITEM_PLANT_INFO[(int)ITEM_PLANT_TYPE.WATERMELON];
     public GameObject Plant_Content;
     public GameObject[] item_plants_prefabs;
     // Start is called before the first frame update
@@ -42,8 +42,8 @@ public class UI_Inventory : MonoBehaviour
     {
         for(int i = 0; i < inventory_Items_Plants.Length; i++)
         {
-            inventory_Items_Plants[i].itemType = (UI_ITEM_PLANT_TYPE)i;
-            if (inventory_Items_Plants[i].itemType == UI_ITEM_PLANT_TYPE.NULL)
+            inventory_Items_Plants[i].itemType = (ITEM_PLANT_TYPE)i;
+            if (inventory_Items_Plants[i].itemType == ITEM_PLANT_TYPE.NULL)
             {
                 continue;
             }

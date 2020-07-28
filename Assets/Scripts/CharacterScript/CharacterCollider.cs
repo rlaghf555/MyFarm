@@ -21,7 +21,10 @@ public class CharacterCollider : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Grid")
+            return;
         colGameObject = other.gameObject;
+        Debug.Log(colGameObject);
         if(colGameObject.tag == "Portal")
         {
             OpenScript();
@@ -33,6 +36,8 @@ public class CharacterCollider : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
+        if (other.tag == "Grid")
+            return;
         if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable" || colGameObject.tag == "Sign")
         {
 

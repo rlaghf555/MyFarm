@@ -5,10 +5,11 @@ public enum CollectableType
 {
     TREE, ROCK
 };
-public class CollectableObject : MonoBehaviour
+public class CollectableObject : Building_Object
 {
     public CollectableType collectableType;
     public int trytime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class CollectableObject : MonoBehaviour
     {
         
     }
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
@@ -36,6 +38,7 @@ public class CollectableObject : MonoBehaviour
             FindObjectOfType<GameController>().ReleaseTryObject();
         }
     }
+    */
     public void Try()
     {
         trytime--;
@@ -47,6 +50,7 @@ public class CollectableObject : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
     public void Selected()
     {
         GetComponent<Outline>().enabled = true;
