@@ -38,6 +38,8 @@ public class CharacterCollider : MonoBehaviour
     {
         if (other.tag == "Grid")
             return;
+        if (colGameObject == null)
+            return;
         if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable" || colGameObject.tag == "Sign")
         {
 

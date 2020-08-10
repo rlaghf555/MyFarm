@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4583861406084338}
   - component: {fileID: 33120581747022194}
   - component: {fileID: 23670228405445438}
-  - component: {fileID: 95129504620392608}
+  - component: {fileID: 64719709323579086}
   m_Layer: 0
   m_Name: SM_Generic_Small_Rocks_05
   m_TagString: Untagged
@@ -51,6 +51,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -66,6 +67,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -81,20 +83,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1924654786812670}
   m_Mesh: {fileID: 4300000, guid: 6ed551e890e2cd04a9b79d864c5320c7, type: 3}
---- !u!95 &95129504620392608
-Animator:
-  serializedVersion: 3
+--- !u!64 &64719709323579086
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1924654786812670}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6ed551e890e2cd04a9b79d864c5320c7, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 43907804696053286, guid: ba888c77f68bd3a418c3db9287bf45b4, type: 2}

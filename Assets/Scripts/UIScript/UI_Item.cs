@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.iOS;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,9 +14,13 @@ public class UI_Item : MonoBehaviour
     public string Eng_Text;
     private TextMesh Item_Name;
     private TextMesh Item_Text;
-    public TextMesh t_num;
+    [SerializeField]
+    private TextMesh t_num;
     public int i_num;
     public ITEM_PLANT_TYPE item_plant_type;
+    private void Awake()
+    {
+    }
     public void SetItemInfo()
     {
         Item_Text = GameObject.Find("Item Text").GetComponent<TextMesh>();
@@ -30,6 +35,7 @@ public class UI_Item : MonoBehaviour
     }
     public void SetNumText()
     {
+        t_num.fontSize = 0;
         t_num.text = "X" + i_num.ToString();
     }
     public void SetPlantInfo()
@@ -37,6 +43,17 @@ public class UI_Item : MonoBehaviour
 
         GameObject.Find("Build Name").GetComponent<Text>().text = Kor_Name;
         GameObject.Find("Build Text").GetComponent<Text>().text = Kor_Text;
+
+    }
+    public void SetNum()
+    {
+        
+        //Debug.Log(FindObjectOfType<UI_Inventory>().inventory_Items_Plants[1].num);
+        i_num = Resources.FindObjectsOfTypeAll<UI_Inventory>()[0].inventory_Items_Plants[(int)item_plant_type].num;
+        SetNumText();
+    }
+    public void Build_On_Click()
+    {
 
     }
 }

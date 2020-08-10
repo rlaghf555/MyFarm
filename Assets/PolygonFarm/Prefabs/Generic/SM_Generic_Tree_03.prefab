@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4628061784119660}
   - component: {fileID: 33088213492193364}
   - component: {fileID: 23484339040496786}
-  - component: {fileID: 95361804834755872}
+  - component: {fileID: 64197311751072624}
   m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
@@ -51,6 +51,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -66,6 +67,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -81,20 +83,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092034201289170}
   m_Mesh: {fileID: 4300000, guid: 5d04779582cddc847acaad6e564ec308, type: 3}
---- !u!95 &95361804834755872
-Animator:
-  serializedVersion: 3
+--- !u!64 &64197311751072624
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092034201289170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5d04779582cddc847acaad6e564ec308, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 43521805258982420, guid: 91c3a19b3e5b52d48bbe86acfbf437be, type: 2}

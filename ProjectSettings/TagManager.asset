@@ -16,6 +16,7 @@ TagManager:
   - CameraTouch2
   - Grid
   - Building
+  - Crop
   layers:
   - Default
   - TransparentFX

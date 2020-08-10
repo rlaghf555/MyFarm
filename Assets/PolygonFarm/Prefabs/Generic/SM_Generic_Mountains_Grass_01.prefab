@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4663623752076018}
   - component: {fileID: 33378828297825732}
   - component: {fileID: 23493660643887410}
-  - component: {fileID: 95155048264188068}
+  - component: {fileID: 64590528970456672}
   m_Layer: 0
   m_Name: SM_Generic_Mountains_Grass_01
   m_TagString: Untagged
@@ -51,6 +51,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -66,6 +67,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -81,20 +83,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780230329900766}
   m_Mesh: {fileID: 4300000, guid: b790f92702525c34f98813ccda80c827, type: 3}
---- !u!95 &95155048264188068
-Animator:
-  serializedVersion: 3
+--- !u!64 &64590528970456672
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1780230329900766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: b790f92702525c34f98813ccda80c827, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: b790f92702525c34f98813ccda80c827, type: 3}

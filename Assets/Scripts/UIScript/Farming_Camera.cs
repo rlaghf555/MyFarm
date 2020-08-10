@@ -36,9 +36,9 @@ public class Farming_Camera : MonoBehaviour
                 {
                     Debug.Log("touch");
                     Vector3 newPos = transform.position;
-                    newPos.x += Input.GetTouch(0).deltaPosition.x * (speed * 0.1f);
+                    newPos.x += Input.GetTouch(0).deltaPosition.x * (speed * 0.01f);
                     newPos.y = Camerapos.position.y;
-                    newPos.z += Input.GetTouch(0).deltaPosition.y * (speed * 0.1f) ;
+                    newPos.z += Input.GetTouch(0).deltaPosition.y * (speed * 0.01f) ;
                    
                     if (newPos.x < -70)
                         newPos.x = -70;
@@ -66,11 +66,14 @@ public class Farming_Camera : MonoBehaviour
             {
                 if (hitInfo.collider.tag == "CameraTouch2")
                 {
-                    
                     Vector3 newPos = transform.position;
                     newPos.x += Input.GetAxis("Mouse X") * speed;
+                    newPos.z -= Input.GetAxis("Mouse X") * speed;
                     newPos.y = Camerapos.position.y;
+                
+                    newPos.x += Input.GetAxis("Mouse Y") * speed;
                     newPos.z += Input.GetAxis("Mouse Y") * speed;
+                    
                     if (newPos.x < -70)
                         newPos.x = -70;
                     if (newPos.x > 80)

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2558382100581657124}
   - component: {fileID: 2558382100581657123}
   - component: {fileID: 2558382100581657122}
-  - component: {fileID: 2558382100581657125}
   - component: {fileID: 2558382100581657311}
+  - component: {fileID: 3067483887983240463}
   m_Layer: 8
   m_Name: Plum_UI_Building
   m_TagString: Untagged
@@ -28,7 +28,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2558382100581657120}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2558382100581657125}
+      - m_Target: {fileID: 0}
         m_MethodName: SetItemInfo
         m_Mode: 1
         m_Arguments:
@@ -133,27 +133,6 @@ MonoBehaviour:
           m_StringArgument: asdf
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2558382100581657125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2558382100581657120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 429ee5421f496e24aa4eada8275793af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Kor_Name: "\uC790\uB450"
-  Eng_Name: Plum
-  Kor_Text: "\uB9DB\uC788\uB294 \uC0AC\uACFC\uB2E4\n\uC0AC\uC6A9: \uCCB4\uB825+10"
-  Eng_Text: 'This is delicious apple
-
-    use: Health+10'
-  t_num: {fileID: 2558382101440100047}
-  i_num: 0
-  item_plant_type: 22
 --- !u!114 &2558382100581657311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +148,25 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 0.5, y: 0.5}
   m_UseGraphicAlpha: 1
+--- !u!114 &3067483887983240463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558382100581657120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b36a755b489a340abd90b636073bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  build_object: 9
+  Kor_Name: "\uC790\uB450"
+  Eng_Name: Plum
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:500G"
+  Eng_Text: 'Growth period:7Days
+
+    Cost:500G'
 --- !u!1 &2558382101440100045
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,7 +252,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2558382101440100045}
-  m_Text: x1
+  m_Text: 500G
   m_OffsetZ: -1
   m_CharacterSize: 5
   m_LineSpacing: 1

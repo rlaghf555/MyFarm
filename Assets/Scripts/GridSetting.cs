@@ -74,7 +74,7 @@ public class GridSetting : MonoBehaviour
                 Quaternion q = Quaternion.identity;
                // q.eulerAngles = new Vector3(90, 0, 0);
                 Vector3 boxpos = pos;
-                boxpos.y = -0.3f;
+                boxpos.y = -0.35f;
                 mainArray[x].subArray[z] = Instantiate(gridBox, boxpos, q, grid.transform);
                 mainArray[x].subArray[z].GetComponentInChildren<Grid>().grid_x = x;
                 mainArray[x].subArray[z].GetComponentInChildren<Grid>().grid_z = z;

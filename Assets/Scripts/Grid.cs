@@ -17,9 +17,14 @@ public class Grid : MonoBehaviour
         //GetComponent<SpriteRenderer>().color = Color.green;
         GetComponent<Outline>().OutlineColor = Color.green;
     }
+    public void Modifying()
+    {
+        GetComponent<Outline>().OutlineColor = Color.magenta;
+
+    }
     public void UnSelected()
     {
         //GetComponent<SpriteRenderer>().color = Color.white;
-        GetComponent<Outline>().OutlineColor = Color.gray;
+        GetComponent<Outline>().OutlineColor = Color.white;
     }
 }

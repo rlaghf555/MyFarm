@@ -7,7 +7,7 @@ public enum ITEM_PLANT_TYPE
     CABBAGE,CARROT,CHERRY,CHILLI,CORN,CUCUMBER,EGGPLANT,LEMON,
     LETTUCE,ONION,ORANGE,PEACH,PEAR,PEPPER,PLUM,POTATO,
     PUMPKIN_ITALIAN, PUMPKIN, PUMPKIN_WHITE,SQUASH_BUTTERNUT,
-    SQUASH_DELICATA,STRAWBERRY,Sunflower,TOMATO,WATERMELON
+    SQUASH_DELICATA,STRAWBERRY,SUNFLOWER,TOMATO,WATERMELON
 }
 ;
 [System.Serializable]
@@ -21,17 +21,7 @@ public class UI_Inventory : MonoBehaviour
     public UI_ITEM_PLANT_INFO[] inventory_Items_Plants = new UI_ITEM_PLANT_INFO[(int)ITEM_PLANT_TYPE.WATERMELON];
     public GameObject Plant_Content;
     public GameObject[] item_plants_prefabs;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //items = new UI_ITEM_INFO[50];
-        //setinventory
-    }
-    private void Awake()
-    {
-        SetInventory();
 
-    }
 
     // Update is called once per frame
     void Update()

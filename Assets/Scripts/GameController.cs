@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,7 @@ public class GameController : MonoBehaviour
     public GameObject loadingScreen;
     public GetLine ui_script;
     public CharacterSetting characterSetting;
+    public UI_Inventory ui_inventory;
     private GameObject collectableObject;
     private ACT_BUTTON_STATE actButtonState;
     // Start is called before the first frame update
@@ -28,7 +30,15 @@ public class GameController : MonoBehaviour
         character.transform.position = spawnpos.position;
         character.rotation = spawnpos.rotation;
         actButtonState = ACT_BUTTON_STATE.DISABLE;
-        characterSetting.SetCharacter();
+        ui_inventory.SetInventory();
+        try
+        {
+            characterSetting.SetCharacter();
+        }
+        catch(System.Exception e)
+        {
+            Debug.Log(e);
+        }
         //loadingScreen.SetActive(false);
 
     }

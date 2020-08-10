@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4369799291534954}
   - component: {fileID: 33651916401343232}
   - component: {fileID: 23787437520110124}
+  - component: {fileID: 64737958659675064}
   m_Layer: 0
   m_Name: SM_Bld_ProduceStand_01
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -65,6 +67,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -80,3 +83,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1504926191794242}
   m_Mesh: {fileID: 4300000, guid: d76aea9ab6052b04b8613088b3844695, type: 3}
+--- !u!64 &64737958659675064
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1504926191794242}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 43965640075710556, guid: 560a450a32995584fba96d4a78c21758, type: 2}
