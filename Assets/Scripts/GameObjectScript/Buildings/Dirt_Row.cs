@@ -1,21 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum CROP_TYPE
-{
-    CROP_ASPARAGUS
-};
+
 public class Dirt_Row : Building_Object
 {
-    public CROP_TYPE plant_type;
+    public ITEM_PLANT_TYPE plant_type;
     [SerializeField]
     private GameObject[] Crops;
+    [SerializeField]
+    private Transform Crop_Pos;
     private void Start()
     {
-        Plant_Crop(CROP_TYPE.CROP_ASPARAGUS);
     }
-    public void Plant_Crop(CROP_TYPE crop_type)
+    public void Plant_Crop(ITEM_PLANT_TYPE crop_type)
     {
-        Instantiate(Crops[(int)crop_type], gameObject.transform.position, Quaternion.identity);
+        Instantiate(Crops[(int)crop_type], Crop_Pos.position, Quaternion.identity,Crop_Pos);
     }
 }

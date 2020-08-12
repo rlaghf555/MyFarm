@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Crop_Bean : Crops
+public class Crop_Cabbage : Crops
 {
     //private void Update()
     //{
@@ -23,9 +23,10 @@ public class Crop_Bean : Crops
                 VegeRows.SetActive(true);
                 break;
             case 1:
+            case 2:
                 {
                     VegeRows.SetActive(false);
-                    foreach(GameObject t in CropPos)
+                    foreach (GameObject t in CropPos)
                     {
                         if (t.transform.childCount > 0)
                             Destroy(t.transform.GetChild(0).gameObject);
@@ -33,36 +34,25 @@ public class Crop_Bean : Crops
                     }
                 }
                 break;
-            case 2:
+            case 3:
+            case 4:
                 {
                     VegeRows.SetActive(false);
                     foreach (GameObject t in CropPos)
                     {
-                        if(t.transform.childCount>0)
-                        Destroy(t.transform.GetChild(0).gameObject);
+                        if (t.transform.childCount > 0)
+                            Destroy(t.transform.GetChild(0).gameObject);
                         Instantiate(CropPrefabs[1], t.transform);
                     }
                 }
                 break;
-            case 3:               
-            case 4:
-                    VegeRows.SetActive(false);
+            case 5:
+                VegeRows.SetActive(false);
                 foreach (GameObject t in CropPos)
                 {
-                    if(t.transform.childCount > 0)
-                    Destroy(t.transform.GetChild(0).gameObject);
-                    Instantiate(CropPrefabs[2], t.transform);
-                }
-                break;
-            case 5:
-                {
-                    VegeRows.SetActive(false);
-                    foreach (GameObject t in CropPos)
-                    {
-                        if(t.transform.childCount > 0)
+                    if (t.transform.childCount > 0)
                         Destroy(t.transform.GetChild(0).gameObject);
-                        Instantiate(CropPrefabs[3], t.transform);
-                    }
+                    Instantiate(CropPrefabs[2], t.transform);
                 }
                 break;
 

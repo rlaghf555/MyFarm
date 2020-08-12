@@ -39952,7 +39952,10 @@ MonoBehaviour:
   character: {fileID: 204137276}
   axeButton: {fileID: 0}
   spadeButton: {fileID: 0}
+  loadingScreen: {fileID: 0}
   ui_script: {fileID: 0}
+  characterSetting: {fileID: 0}
+  ui_inventory: {fileID: 0}
 --- !u!4 &1094332772
 Transform:
   m_ObjectHideFlags: 0
@@ -77210,6 +77213,18 @@ PrefabInstance:
     - target: {fileID: 4167307928638470, guid: 06d67c27b2f077647b73da9248edef2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167307928638470, guid: 06d67c27b2f077647b73da9248edef2f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.09416468
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167307928638470, guid: 06d67c27b2f077647b73da9248edef2f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.09416468
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167307928638470, guid: 06d67c27b2f077647b73da9248edef2f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.09416468
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06d67c27b2f077647b73da9248edef2f, type: 3}

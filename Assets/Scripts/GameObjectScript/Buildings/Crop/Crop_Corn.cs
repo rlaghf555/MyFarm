@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Crop_Bean : Crops
+public class Crop_Corn : Crops
 {
     //private void Update()
     //{
@@ -23,46 +23,58 @@ public class Crop_Bean : Crops
                 VegeRows.SetActive(true);
                 break;
             case 1:
+            case 2:
+
                 {
                     VegeRows.SetActive(false);
-                    foreach(GameObject t in CropPos)
+                    foreach (GameObject t in CropPos)
                     {
                         if (t.transform.childCount > 0)
                             Destroy(t.transform.GetChild(0).gameObject);
                         Instantiate(CropPrefabs[0], t.transform);
                     }
                 }
-                break;
-            case 2:
+                break;              
+            case 3:
+            case 4:
                 {
                     VegeRows.SetActive(false);
                     foreach (GameObject t in CropPos)
                     {
-                        if(t.transform.childCount>0)
-                        Destroy(t.transform.GetChild(0).gameObject);
+                        if (t.transform.childCount > 0)
+                            Destroy(t.transform.GetChild(0).gameObject);
                         Instantiate(CropPrefabs[1], t.transform);
                     }
                 }
-                break;
-            case 3:               
-            case 4:
-                    VegeRows.SetActive(false);
+                break;          
+            case 5:
+            case 6:
+            case 7:
+                VegeRows.SetActive(false);
                 foreach (GameObject t in CropPos)
                 {
-                    if(t.transform.childCount > 0)
-                    Destroy(t.transform.GetChild(0).gameObject);
+                    if (t.transform.childCount > 0)
+                        Destroy(t.transform.GetChild(0).gameObject);
                     Instantiate(CropPrefabs[2], t.transform);
                 }
                 break;
-            case 5:
+            case 8:
+            case 9:
+                VegeRows.SetActive(false);
+                foreach (GameObject t in CropPos)
                 {
-                    VegeRows.SetActive(false);
-                    foreach (GameObject t in CropPos)
-                    {
-                        if(t.transform.childCount > 0)
+                    if (t.transform.childCount > 0)
                         Destroy(t.transform.GetChild(0).gameObject);
-                        Instantiate(CropPrefabs[3], t.transform);
-                    }
+                    Instantiate(CropPrefabs[3], t.transform);
+                }
+                break;
+            case 10:
+                VegeRows.SetActive(false);
+                foreach (GameObject t in CropPos)
+                {
+                    if (t.transform.childCount > 0)
+                        Destroy(t.transform.GetChild(0).gameObject);
+                    Instantiate(CropPrefabs[4], t.transform);
                 }
                 break;
 
