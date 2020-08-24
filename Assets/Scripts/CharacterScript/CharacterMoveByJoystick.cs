@@ -42,7 +42,7 @@ public class CharacterMoveByJoystick : MonoBehaviour
     {
         Vector3 moveDistance =
            floatingJoystick.Vertical * transform.forward * moveSpeed * Time.deltaTime;
-        playerRigidBody.MovePosition(playerRigidBody.position + moveDistance);
+        playerRigidBody.MovePosition(playerRigidBody.position+new Vector3(0,-0.03f,0) + moveDistance);
         playerAnimator.SetFloat("Move", floatingJoystick.Vertical);
         if (floatingJoystick.Vertical != 0)
         {

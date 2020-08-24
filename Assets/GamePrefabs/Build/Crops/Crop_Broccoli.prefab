@@ -472,6 +472,8 @@ MonoBehaviour:
   VegeRows: {fileID: 8036469286328755214}
   item_plant_type: 7
   ReturnValue: 10
+  Kor_Name: "\uBE0C\uB85C\uCF5C\uB9AC"
+  Eng_Name: Broccoli
 --- !u!1001 &6203662298694554466
 PrefabInstance:
   m_ObjectHideFlags: 0

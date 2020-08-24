@@ -11,6 +11,8 @@ public class Crops : MonoBehaviour
     public GameObject VegeRows;
     public ITEM_PLANT_TYPE item_plant_type;
     public int ReturnValue;
+    public string Kor_Name;
+    public string Eng_Name;
     public virtual void SetCrop()
     {
 

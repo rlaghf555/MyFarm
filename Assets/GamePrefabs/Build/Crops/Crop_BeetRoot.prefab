@@ -472,6 +472,8 @@ MonoBehaviour:
   VegeRows: {fileID: 8036469286328755214}
   item_plant_type: 6
   ReturnValue: 10
+  Kor_Name: "\uC0AC\uD0D5\uBB34"
+  Eng_Name: Beetroot
 --- !u!1001 &6203662298694554466
 PrefabInstance:
   m_ObjectHideFlags: 0

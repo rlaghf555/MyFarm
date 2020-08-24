@@ -17,6 +17,7 @@ TagManager:
   - Grid
   - Building
   - Crop
+  - Dirt
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - 
   - Inventory,Build
   - Grid
-  - 
+  - Dirt
   - 
   - 
   - 

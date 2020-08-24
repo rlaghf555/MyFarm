@@ -472,6 +472,8 @@ MonoBehaviour:
   VegeRows: {fileID: 8036469286328755214}
   item_plant_type: 8
   ReturnValue: 10
+  Kor_Name: "\uC591\uBC30\uCD94"
+  Eng_Name: Cabbage
 --- !u!1001 &6203662298694554466
 PrefabInstance:
   m_ObjectHideFlags: 0

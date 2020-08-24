@@ -14,18 +14,7 @@ public class MenuCharacter : MonoBehaviour
     public int materialIndex;
     public GameObject createCharacterButton;
     public GameObject openSceneButton;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Load();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void Load()
     {
         saveData = SaveSystem.Load(filename);

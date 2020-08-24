@@ -243,14 +243,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429ee5421f496e24aa4eada8275793af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kor_Name: "\uD6C4\uCD94"
-  Eng_Name: Pepper
+  Kor_Name: "\uD53C\uB9DD"
+  Eng_Name: Bell Pepper
   Kor_Text: "\uB9DB\uC788\uB294 \uC0AC\uACFC\uB2E4\n\uC0AC\uC6A9: \uCCB4\uB825+10"
   Eng_Text: 'This is delicious apple
 
     use: Health+10'
   t_num: {fileID: 7537879480323737704}
   i_num: 0
+  item_plant_type: 0
 --- !u!1001 &3284545686248522980
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4884795693172738946}
   - component: {fileID: 4191665102772494754}
   - component: {fileID: 484722516632687734}
-  m_Layer: 0
+  - component: {fileID: -8227150117595923307}
+  m_Layer: 10
   m_Name: Building_Dirt_Rows
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237211744009174205}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -71.966446, y: -0.43891105, z: 10.794346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7595757206901423905}
@@ -55,38 +56,38 @@ MonoBehaviour:
   plant_type: 0
   Crops:
   - {fileID: 0}
-  - {fileID: 7537879481198433415, guid: 01f639fec3ac7f04c8f19f8dbd7518c1, type: 3}
-  - {fileID: 16297863241748614, guid: 8211da8897c460a42b170e9126537bad, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 2362517496779562822, guid: ba19f279ea93e9f4f9cfbb5a28450b6d, type: 3}
-  - {fileID: 16297863241748614, guid: f7f47e2b7beab2a41a4eeb37056440f1, type: 3}
+  - {fileID: 0}
   - {fileID: 8035810555203280987, guid: 24cd159e29432254b8d69672393f97aa, type: 3}
   - {fileID: 8035810555203280987, guid: abb738f5c001ba643b38fe9b5675f872, type: 3}
-  - {fileID: 7537879481198433415, guid: 7db4298d2ad7aa14e8bbba2d6fad2441, type: 3}
-  - {fileID: 7537879481198433415, guid: 2220ce6a08639924fb880abe8f6751d2, type: 3}
-  - {fileID: 7537879481198433415, guid: 0a2afd7982cbd274db471f63e71e5f9e, type: 3}
-  - {fileID: 7537879481198433415, guid: 5e55ab6f83282a048b70ae1b9823c9db, type: 3}
-  - {fileID: 7537879481198433415, guid: e0cdaca524d662447b736c347b3d8317, type: 3}
-  - {fileID: 7537879481198433415, guid: 0d8757d844b58be47b440457479f16ae, type: 3}
-  - {fileID: 7537879481198433415, guid: b3715554785f37a40ab77eb22f098764, type: 3}
-  - {fileID: 7537879481198433415, guid: 0caaa98a311dc83459e9cc34c8f33db5, type: 3}
-  - {fileID: 7537879481198433415, guid: a694d88fed60fcb47afd934ece0965df, type: 3}
-  - {fileID: 7537879481198433415, guid: a4aa943cb1449e74c88d80dee7e04217, type: 3}
-  - {fileID: 7537879481198433415, guid: 73ca42f9e17168843aa2cd1804afff23, type: 3}
-  - {fileID: 7537879481198433415, guid: 20c02506b487a1844bf845c37a22c8f0, type: 3}
-  - {fileID: 7537879481198433415, guid: f0219df0febab144781ba0672e23ffc5, type: 3}
-  - {fileID: 7537879481198433415, guid: 23675cd3b581f3f42abea99fe1efed44, type: 3}
-  - {fileID: 7537879481198433415, guid: da75e1102b9e06346813328317721fbc, type: 3}
-  - {fileID: 7537879481198433415, guid: d9d27a8599bea3442b12f8b4f7f6d0cc, type: 3}
-  - {fileID: 7537879481198433415, guid: 276343a7cf21f354d975cc90f9c7e28c, type: 3}
-  - {fileID: 7537879481198433415, guid: 56db3ecb0905e4b49897066b1dce2d19, type: 3}
-  - {fileID: 7537879481198433415, guid: 610e17a092c880048a018894de654a64, type: 3}
-  - {fileID: 7537879481198433415, guid: 352f7b2d47656844ab6447e98bc8cecc, type: 3}
-  - {fileID: 7537879481198433415, guid: e5531b159674b004f91c993e580bfa43, type: 3}
-  - {fileID: 7537879481198433415, guid: 6d9fac2701e1d0c4684ab27b3f3e7ac8, type: 3}
-  - {fileID: 7537879481198433415, guid: 66ca4c75719263647ba2e02e032f1d2f, type: 3}
-  - {fileID: 7537879481198433415, guid: 01eaa0586b0c8d644a212424d7387d32, type: 3}
-  - {fileID: 7537879481198433415, guid: 9d5b7cd901a4f404588bf40e35a209b3, type: 3}
-  - {fileID: 7537879481198433415, guid: d0cabb67810e5434eba8e0056e4e0091, type: 3}
+  - {fileID: 8035810555203280987, guid: ca91d6047195d3d428a8a6d3c858deb1, type: 3}
+  - {fileID: 8035810555203280987, guid: 7c93bf8270b955c4da4bf24be0a9e2f1, type: 3}
+  - {fileID: 8035810555203280987, guid: 385d50168b39a614a85583b0a388ac74, type: 3}
+  - {fileID: 0}
+  - {fileID: 8035810555203280987, guid: 2be1fa941ddff224db859f3f474ebf36, type: 3}
+  - {fileID: 8035810555203280987, guid: 4790838e5b5671f4faf1b57f6d02eb91, type: 3}
+  - {fileID: 8035810555203280987, guid: fff9a2dc921c8224a9497dadd860b47e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8035810555203280987, guid: 6e2e17db3a2e1f04d98689f04c5ef046, type: 3}
+  - {fileID: 8035810555203280987, guid: 4c187a3e090b48c47ba3b676ade82d64, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8035810555203280987, guid: 2932147007a98ee479a0255487e5a871, type: 3}
+  - {fileID: 0}
+  - {fileID: 8035810555203280987, guid: 9227e13c10a82e04e8a546c0038d120e, type: 3}
+  - {fileID: 8035810555203280987, guid: 8448cef8cbc9fd344a124869a940eb87, type: 3}
+  - {fileID: 8035810555203280987, guid: 2afb70d7e87d75849aae931316a1c620, type: 3}
+  - {fileID: 8035810555203280987, guid: 2c586708e3f0e054787a6e30a7efb7d8, type: 3}
+  - {fileID: 8035810555203280987, guid: b20f7ec94f6a3c14ab9421bccc9d041f, type: 3}
+  - {fileID: 8035810555203280987, guid: 5c48ddaa66fd70644a756b6b2a30d4bf, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8035810555203280987, guid: c4fccc935abb5fa4895aaf450fb7cbf5, type: 3}
+  - {fileID: 8035810555203280987, guid: 9d0772792be964146b13bbec25a76472, type: 3}
   Crop_Pos: {fileID: 8656588727103522951}
 --- !u!65 &484722516632687734
 BoxCollider:
@@ -101,6 +102,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.19, y: 0.62, z: 6.7}
   m_Center: {x: 0.39, y: 0, z: -1.64}
+--- !u!114 &-8227150117595923307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237211744009174205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0cae966f95b0894cb6a98c616e0ea31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines: []
 --- !u!1 &7170073072168448834
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +285,10 @@ PrefabInstance:
     - target: {fileID: 1928883611837980, guid: 07f1cb66f92cc884f811a47abb580688, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1928883611837980, guid: 07f1cb66f92cc884f811a47abb580688, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4187834345423590, guid: 07f1cb66f92cc884f811a47abb580688, type: 3}
       propertyPath: m_LocalPosition.x

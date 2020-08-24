@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035033156179399835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.498, y: 0.342, z: 2.631}
+  m_LocalPosition: {x: -2.498, y: 0.342, z: 2.32}
   m_LocalScale: {x: 1.7144079, y: 1.7144079, z: 0.80385697}
   m_Children: []
   m_Father: {fileID: 8035810555203280986}
@@ -91,6 +91,8 @@ MonoBehaviour:
   VegeRows: {fileID: 8036469286328755214}
   item_plant_type: 13
   ReturnValue: 10
+  Kor_Name: "\uC624\uC774"
+  Eng_Name: Cucumber
 --- !u!1001 &6203662298694554466
 PrefabInstance:
   m_ObjectHideFlags: 0

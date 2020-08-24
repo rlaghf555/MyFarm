@@ -29,7 +29,7 @@ public class CharacterCollider : MonoBehaviour
         {
             OpenScript();
         }
-        if(colGameObject.tag == "NPC"||colGameObject.tag == "Collectable"||colGameObject.tag=="Sign")
+        if(colGameObject.tag == "NPC"||colGameObject.tag == "Collectable"||colGameObject.tag=="Sign"||colGameObject.tag=="Building")
         {
             openScriptButton.SetActive(true);
         }
@@ -40,7 +40,7 @@ public class CharacterCollider : MonoBehaviour
             return;
         if (colGameObject == null)
             return;
-        if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable" || colGameObject.tag == "Sign")
+        if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable" || colGameObject.tag == "Sign" || colGameObject.tag == "Building")
         {
 
             

@@ -475,6 +475,8 @@ MonoBehaviour:
   VegeRows: {fileID: 8036469286328755214}
   item_plant_type: 11
   ReturnValue: 10
+  Kor_Name: Chilli
+  Eng_Name: "\uACE0\uCD94"
 --- !u!1001 &6203662298694554466
 PrefabInstance:
   m_ObjectHideFlags: 0

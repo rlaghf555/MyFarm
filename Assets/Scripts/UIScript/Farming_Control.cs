@@ -12,7 +12,7 @@ public enum BUILD_OBJECT
 }
 public enum FARMING_MODE
 {
-    DEFAULT,BUILDING,MODIFY
+    DEFAULT,BUILDING,MODIFY,PLANTING
 }
 public class Farming_Control : MonoBehaviour
 {
@@ -25,6 +25,7 @@ public class Farming_Control : MonoBehaviour
     public GameObject building_object;
     public FARMING_MODE mode;
     public Vector3 button_offset;
+    public bool planting_ready = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +51,7 @@ public class Farming_Control : MonoBehaviour
                 if (hit.collider != null)
                 {
 
-                    if (hit.collider.tag == "Collectable" || hit.collider.tag == "Grid" || hit.collider.tag == "Building")
+                    if (hit.collider.tag == "Collectable" || hit.collider.tag == "Grid" || hit.collider.tag == "Building"|| hit.collider.tag == "Dirt")
                     {
                         objectcheck = hit.collider.gameObject;
                     }
@@ -78,7 +79,7 @@ public class Farming_Control : MonoBehaviour
                         }
                         selected_object = hit.collider.gameObject;
 
-                        if (hit.collider.tag == "Collectable" || hit.collider.tag == "Building")
+                        if (hit.collider.tag == "Collectable" || hit.collider.tag == "Building" || hit.collider.tag == "Dirt")
                         {
                             Debug.Log(hit.collider);
                             building_object = hit.collider.gameObject;
@@ -155,16 +156,10 @@ public class Farming_Control : MonoBehaviour
                     }
                 }
             }
-            if (building_object)
-            {
-                build_buttons.SetActive(true);
-                build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(building_object.transform.position) + button_offset;
-            }
-            else
-            {
-                build_buttons.SetActive(false);
 
-            }
+                build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(building_object.transform.position+building_object.GetComponent<BoxCollider>().center) + button_offset;
+           
+          
         }
         else if(mode== FARMING_MODE.MODIFY)
         {
@@ -228,19 +223,82 @@ public class Farming_Control : MonoBehaviour
                     }
                 }
             }
+           
+                build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(selected_object.transform.position + selected_object.GetComponent<BoxCollider>().center) + button_offset;
+
+        }
+        else if(mode == FARMING_MODE.PLANTING)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                RaycastHit hit;
+                //Debug.Log("down");
+                Ray ray = Farming_Camera.ScreenPointToRay(Input.mousePosition);
+                Debug.Log("Shoot");
+                int layermask = 1 << LayerMask.NameToLayer("Dirt");
+                Physics.Raycast(ray, out hit, 10000f, layermask);
+               // Physics.Raycast(ray, out hit);
+                //Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 2);
+                Debug.DrawRay(ray.origin, ray.direction * 10000, Color.red, 5);
+                Debug.Log(hit.collider);
+                if (hit.collider != null)
+                {            
+                    objectcheck = hit.collider.gameObject;
+                   
+                }
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
+                RaycastHit hit;
+                //Debug.Log("down");
+                Ray ray = Farming_Camera.ScreenPointToRay(Input.mousePosition);
+                int layermask = 1 << LayerMask.NameToLayer("Dirt");
+                Physics.Raycast(ray, out hit, 10000f, layermask);
+                //Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 2);
+                //Physics.Raycast(ray, out hit);
+                Debug.DrawRay(ray.origin, ray.direction * 10000, Color.red, 5);
+
+                if (hit.collider != null)
+                {
+                    if (objectcheck == hit.collider.gameObject)
+                    {                       
+                        selected_object = hit.collider.gameObject;
+                        gridSetting.GridReset();
+                        Planting_Grid_Set();
+                       
+                    }
+                }
+            }
             if (selected_object)
             {
-                build_buttons.SetActive(true);
-                build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(selected_object.transform.position) + button_offset;
-
-            }
-            else
-            {
-                build_buttons.SetActive(false);
+                if (selected_object.GetComponent<Dirt_Row>().plant_type != ITEM_PLANT_TYPE.NULL)
+                {
+                    build_buttons.SetActive(true);
+                    build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(selected_object.transform.position + selected_object.GetComponent<BoxCollider>().center) + button_offset;
+                }
             }
         }
     }
-
+    public void Set_FarmingMode_Planting()
+    {
+        mode = FARMING_MODE.PLANTING;
+        if (building_object.transform.parent == null)
+            Destroy(building_object);
+        gridSetting.GridReset();
+        building_object = null;
+        selected_object = null;
+    }
+    public void Set_FarmingMode_Default()
+    {
+        mode = FARMING_MODE.DEFAULT;
+        if (building_object.transform.parent == null)
+            Destroy(building_object);
+        gridSetting.GridReset();
+        building_object = null;
+        selected_object = null;
+    }
     private void OnEnable()
     {
         if (selected_object)
@@ -304,8 +362,22 @@ public class Farming_Control : MonoBehaviour
             }
         }
     }
+
+    public void Planting_Crop_On_DirtRow(UI_Item ui_Item)
+    {
+        if(mode == FARMING_MODE.PLANTING)
+        {
+            Dirt_Row tmp_dirt_row = selected_object.GetComponent<Dirt_Row>();
+            if (tmp_dirt_row.plant_type == ITEM_PLANT_TYPE.NULL)
+            {   
+                tmp_dirt_row.Plant_Crop(ui_Item.item_plant_type);
+                tmp_dirt_row.plant_type = ui_Item.item_plant_type;
+            }
+        }
+    }
     public bool Building_Grid_Check()
     {
+        build_buttons.SetActive(true);
         bool value = true;
         Building_Object tmp_build = building_object.GetComponent<Building_Object>();
  
@@ -345,6 +417,7 @@ public class Farming_Control : MonoBehaviour
     }
     public bool Select_Grid_Check()
     {
+        build_buttons.SetActive(true);
         bool value = true;
         Building_Object tmp_build = selected_object.GetComponent<Building_Object>();
 
@@ -377,6 +450,20 @@ public class Farming_Control : MonoBehaviour
             }
         }
         return value;
+    }
+    public void Planting_Grid_Set()
+    {
+        Building_Object tmp_build = selected_object.GetComponent<Building_Object>();
+        for (int x = 0; x < tmp_build.size_x; x++)
+        {
+            for (int z = 0; z < tmp_build.size_z; z++)
+            {
+              if (!gridSetting.mainArray[tmp_build.grid_x + x].subArray[tmp_build.grid_z + z].GetComponentInChildren<Grid>().buildable)
+                {
+                        gridSetting.mainArray[tmp_build.grid_x + x].subArray[tmp_build.grid_z + z].GetComponentInChildren<Grid>().Modifying();
+                }
+            }
+        }
     }
     public void Building_Grid_Set()
     {
@@ -436,8 +523,13 @@ public class Farming_Control : MonoBehaviour
             }
             else return;
         }
+        if(mode == FARMING_MODE.PLANTING)
+        {
+            build_buttons.SetActive(false);
+            building_object = null;
+            selected_object = null;
+        }
         gridSetting.GridReset();
-
     }
 
     public void Build_Cancel()
@@ -451,11 +543,22 @@ public class Farming_Control : MonoBehaviour
         }
         if (mode == FARMING_MODE.MODIFY)
         {
-            Destroy(selected_object);
+            Destroy(building_object);
             build_buttons.SetActive(false);
 
             mode = FARMING_MODE.DEFAULT;
         }
+        if (mode == FARMING_MODE.PLANTING)
+        {
+
+             Dirt_Row tmp_dirt_row = selected_object.GetComponent<Dirt_Row>();
+             tmp_dirt_row.plant_type = ITEM_PLANT_TYPE.NULL;
+             tmp_dirt_row.DestroyCrop();
+             build_buttons.SetActive(false);
+
+        }
         gridSetting.GridReset();
+        build_buttons.SetActive(false);
+
     }
 }

@@ -28,7 +28,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7416996337325699323}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -133,6 +133,17 @@ MonoBehaviour:
           m_StringArgument: asdf
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: Planting_Crop_On_DirtRow
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7416996337325699326}
+          m_ObjectArgumentAssemblyTypeName: UI_Item, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7416996337325699326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 429ee5421f496e24aa4eada8275793af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kor_Name: "\uD6C4\uCD94"
-  Eng_Name: Pepper
+  Kor_Name: "\uD53C\uB9DD"
+  Eng_Name: Bell Pepper
   Kor_Text: "\uB9DB\uC788\uB294 \uC0AC\uACFC\uB2E4\n\uC0AC\uC6A9: \uCCB4\uB825+10"
   Eng_Text: 'This is delicious apple
 

@@ -471,6 +471,8 @@ MonoBehaviour:
   VegeRows: {fileID: 8036469286328755214}
   item_plant_type: 5
   ReturnValue: 10
+  Kor_Name: "\uC644\uB450\uCF69"
+  Eng_Name: Bean
 --- !u!1001 &8035810554802571822
 PrefabInstance:
   m_ObjectHideFlags: 0
