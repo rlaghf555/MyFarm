@@ -25,7 +25,7 @@ public class OpenSceneButton : MonoBehaviour
             if (hit.collider == this.GetComponent<BoxCollider>())
             {
                 levelLoader.GetComponent<LevelLoader>().SetSaveData(savedata);
-                levelLoader.GetComponent<LevelLoader>().LoadLevel();
+                levelLoader.GetComponent<LevelLoader>().LoadGame();
                 
             }
 

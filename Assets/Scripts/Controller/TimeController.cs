@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class TimeController : MonoBehaviour
 {
     private Text timeText;
-    [SerializeField] private float secondPerRealtimeSecond;
-    [SerializeField] private float startTime;
-    [SerializeField] private float endTime;
+    [SerializeField] private float secondPerRealtimeSecond=60;
+    [SerializeField] private float startTime=21600;
+    [SerializeField] private float endTime = 79200;
     private float nowTime;
     // Start is called before the first frame update
     void Start()
@@ -63,5 +63,7 @@ public class TimeController : MonoBehaviour
             c.passed_day++;
             c.SetCrop();
         }
+        FindObjectOfType<CharacterData>().Save();
+        FindObjectOfType<CharacterData>().Write();
     }
 }

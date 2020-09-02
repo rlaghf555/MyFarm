@@ -18,7 +18,7 @@ public class UI_ITEM_PLANT_INFO
 }
 public class UI_Inventory : MonoBehaviour
 {
-    public UI_ITEM_PLANT_INFO[] inventory_Items_Plants = new UI_ITEM_PLANT_INFO[(int)ITEM_PLANT_TYPE.WATERMELON];
+    public UI_ITEM_PLANT_INFO[] inventory_Items_Plants = new UI_ITEM_PLANT_INFO[(int)ITEM_PLANT_TYPE.WATERMELON+1];
     public GameObject Plant_Content;
     public GameObject[] item_plants_prefabs;
 
@@ -30,20 +30,21 @@ public class UI_Inventory : MonoBehaviour
     }
     public void SetInventory()
     {
-        for(int i = 0; i < inventory_Items_Plants.Length; i++)
+        for (int i = 0, j = 0 ; i < inventory_Items_Plants.Length; i++)
         {
+            j++;
             inventory_Items_Plants[i].itemType = (ITEM_PLANT_TYPE)i;
             if (inventory_Items_Plants[i].itemType == ITEM_PLANT_TYPE.NULL)
             {
                 continue;
             }
             inventory_Items_Plants[i].num = i;
-            Vector3 pos = new Vector3(10 + (i % 2) * 25, -10 - (i / 2) * 28, 0);
+            Vector3 pos = new Vector3(10 + (j % 2) * 25, 20-(j / 2) * 28, 0);
 
             GameObject newObject = Instantiate(item_plants_prefabs[(int)inventory_Items_Plants[i].itemType],Plant_Content.transform);
 
             newObject.GetComponent<RectTransform>().anchoredPosition = pos;
-            if (i == 0)
+            if (j == 0)
             {
                 newObject.GetComponent<UI_Item>().SetItemInfo();
             }

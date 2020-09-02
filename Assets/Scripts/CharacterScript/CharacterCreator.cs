@@ -96,6 +96,7 @@ public class CharacterCreator : MonoBehaviour
         saveData.onHead = onHeadIndex;
         saveData.characterMesh = characterMeshIndex;
         saveData.characterMaterial = materialIndex;
+        saveData.filename = filename;
         SaveSystem.SavePlayer(filename, saveData);
     }
 }

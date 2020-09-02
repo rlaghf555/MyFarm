@@ -51,7 +51,9 @@ public class CharacterCollider : MonoBehaviour
     public void OpenScript()
     {
         lines.SetActive(true);
-        colGameObject.GetComponent<Line>().SetScripts(); ;
+        Debug.Log(colGameObject+"openscript");
+
+        colGameObject.GetComponent<Line>().SetScripts();
         if(colGameObject.tag == "NPC")
         {
             colGameObject.GetComponent<Animator>().SetTrigger("Talk_Start");

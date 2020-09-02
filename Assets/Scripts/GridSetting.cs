@@ -9,6 +9,7 @@ public class SubArray
 {
     public GameObject[] subArray = new GameObject[14];
 }
+[System.Serializable]
 public class GridSetting : MonoBehaviour
 {
     public Transform[] treePrefabs;
@@ -16,16 +17,17 @@ public class GridSetting : MonoBehaviour
     const int z_size = 14;
     public int gap;
     public Transform position;
-    public SubArray[] mainArray = new SubArray[50];
+    public SubArray[] mainArray;// = new SubArray[50];
     public GameObject gridBox;
     public GameObject grid;
     // Start is called before the first frame update
     void Start()
     {
+       // mainArray = FindObjectOfType<CharacterData>().inGameData.mainArray;
     }
     private void Awake()
     {
-        SetCollectableObject();
+        //SetCollectableObject();
     }
 
     // Update is called once per frame
@@ -93,6 +95,10 @@ public class GridSetting : MonoBehaviour
         }
     }
 
+    public void Initiate()
+    {
+        //FindObjectOfType<CharacterData>().inGameData.;
+    }
     public void GridReset()
     {
         for (int x = 0; x < x_size; x++)

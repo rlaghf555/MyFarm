@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class Portal : MonoBehaviour
 {
     public string scene;
+    private LevelLoader levelLoader;
     // Start is called before the first frame update
     void Start()
     {
-        
+        levelLoader = FindObjectOfType<LevelLoader>();
     }
 
     // Update is called once per frame
@@ -22,7 +23,10 @@ public class Portal : MonoBehaviour
         Debug.Log("TriggerEnter");
         if (other.tag == "Player")
         {
-            SceneManager.LoadScene(scene);
+            if(!levelLoader)
+                levelLoader = FindObjectOfType<LevelLoader>();
+            levelLoader.LoadLevel(scene);
+
         }
     }
 }

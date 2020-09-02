@@ -375,6 +375,18 @@ public class Farming_Control : MonoBehaviour
             }
         }
     }
+    public void Planting_Crop_On_DirtRow(ITEM_PLANT_TYPE type)
+    {
+        if (mode == FARMING_MODE.PLANTING)
+        {
+            Dirt_Row tmp_dirt_row = selected_object.GetComponent<Dirt_Row>();
+            if (tmp_dirt_row.plant_type == ITEM_PLANT_TYPE.NULL)
+            {
+                tmp_dirt_row.Plant_Crop(type);
+                tmp_dirt_row.plant_type = type;
+            }
+        }
+    }
     public bool Building_Grid_Check()
     {
         build_buttons.SetActive(true);

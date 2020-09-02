@@ -9,17 +9,22 @@ public class LevelLoader : MonoBehaviour
     public Slider slider;
     public string scenename;
     public SaveData saveData;
-    public void LoadLevel(string scenename)
+    public void LoadGame(string scenename)
     {
         this.scenename = scenename;
-        LoadLevel();
+        LoadGame();
     }
-    public void LoadLevel()
+    public void LoadGame()
     {
         GetComponent<Animator>().SetTrigger("Fade_Out");
         GameObject newgameObject = GameObject.FindGameObjectWithTag("Data");
         newgameObject.GetComponent<CharacterData>().inGameData = saveData;
         DontDestroyOnLoad(newgameObject);
+    }
+    public void LoadLevel(string scenename)
+    {
+        this.scenename = scenename;
+        GetComponent<Animator>().SetTrigger("Fade_Out");
     }
     public void SetSaveData(SaveData data)
     {
