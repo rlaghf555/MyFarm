@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mystery Forest.unity
     guid: cdaf9c800ed399c4bbfaa61001cb9357
+  - enabled: 1
+    path: Assets/Scenes/World End.unity
+    guid: 99030bedffd6cbe49a6b5b2de5826502
   m_configObjects: {}

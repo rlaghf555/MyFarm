@@ -10,6 +10,7 @@ public class TimeController : MonoBehaviour
     [SerializeField] private float startTime=21600;
     [SerializeField] private float endTime = 79200;
     private float nowTime;
+    public Transform Directional_Light;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,11 @@ public class TimeController : MonoBehaviour
     {
         nowTime += secondPerRealtimeSecond * Time.deltaTime;
         int tmpTime = (int)nowTime;
-
+        if (tmpTime > endTime)
+        {
+            NextDay();
+            return;
+        }
         if (tmpTime / 3600 < 12)
         {
             string time = (tmpTime / 3600).ToString();
@@ -49,21 +54,24 @@ public class TimeController : MonoBehaviour
             }
             timeText.text = time + ":" + minute + "PM";
         }
-        if (tmpTime > endTime)
-            NextDay();
-
+        //x축 0~180도
+        Directional_Light.rotation = Quaternion.Euler(new Vector3(180*((nowTime / (endTime-startTime)-0.375f)), 0, 0));
     }
-   
+
     public void NextDay()
     {
         nowTime = startTime;
         Crops[] crops = FindObjectsOfType<Crops>();
         foreach(Crops c in crops)
         {
+            if(c.passed_day<c.growth_day)
             c.passed_day++;
             c.SetCrop();
         }
         FindObjectOfType<CharacterData>().Save();
         FindObjectOfType<CharacterData>().Write();
+       FindObjectOfType<LevelLoader>().LoadLevel("MyFarm");
+       
+       
     }
 }

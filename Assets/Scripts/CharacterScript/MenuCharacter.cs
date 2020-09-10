@@ -14,7 +14,10 @@ public class MenuCharacter : MonoBehaviour
     public int materialIndex;
     public GameObject createCharacterButton;
     public GameObject openSceneButton;
-
+    private void Start()
+    {
+        Load();
+    }
     public void Load()
     {
         saveData = SaveSystem.Load(filename);

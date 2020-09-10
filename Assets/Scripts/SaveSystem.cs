@@ -14,6 +14,11 @@ public static class SaveSystem
         formatter.Serialize(stream, savedata);
         stream.Close();
     }
+    public static void DeletePlayer(string filename)
+    {
+        string path = Application.persistentDataPath + filename;
+        File.Delete(path);
+    }
     public static SaveData Load(string filename)
     {
         string path = Application.persistentDataPath + filename;

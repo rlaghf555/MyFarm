@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum ACT_BUTTON_STATE
@@ -30,15 +31,28 @@ public class GameController : MonoBehaviour
         character.transform.position = spawnpos.position;
         character.rotation = spawnpos.rotation;
         actButtonState = ACT_BUTTON_STATE.DISABLE;
-        ui_inventory.SetInventory();
-        try
-        {
-            characterSetting.SetCharacter();
-        }
-        catch(System.Exception e)
-        {
-            Debug.Log(e);
-        }
+        //try
+        //{
+        characterSetting.SetCharacter();
+        FindObjectOfType<CharacterData>().Load();
+        //}
+        //catch(System.Exception e)
+        //{
+        //    Debug.Log(e);
+        //}
+        loadingScreen.GetComponent<Animator>().SetTrigger("Fade_In");
+    }
+    private void OnEnable()
+    {
+        //try
+        //{
+        //    FindObjectOfType<CharacterData>().Load();
+        //    ui_inventory.SetInventory();
+        //}
+        //catch (System.Exception e)
+        //{
+        //    Debug.Log(e);
+        //}
         //loadingScreen.SetActive(false);
 
     }
@@ -82,5 +96,10 @@ public class GameController : MonoBehaviour
     public void Try()
     {
         collectableObject.GetComponent<CollectableObject>().Try();
+    }
+    public void DeletePlayer()
+    {
+        FindObjectOfType<CharacterData>().Delete();
+       FindObjectOfType<LevelLoader>().LoadLevel("Menu");
     }
 }

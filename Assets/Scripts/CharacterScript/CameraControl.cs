@@ -23,7 +23,7 @@ public class CameraControl : MonoBehaviour
     void Start()
     {
         mainCamera = GetComponent<Camera>();
-        transform.position = playerTransform.position + cameraOffset;
+        transform.position = Camerapos.position;
         ismove = false;
         mouseX = Input.GetAxis("Mouse X");
         mouseY = Input.GetAxis("Mouse Y");

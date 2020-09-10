@@ -13,10 +13,24 @@ public class Line : MonoBehaviour
     {
         getline = FindObjectOfType<GameController>().ui_script;
     }
+    public virtual void korLine()
+    {
+
+    }
+    public virtual void engLine()
+    {
+
+    }
     public virtual void SetScripts()
     {
-        getline.SetScripts(lines);
+        lines.Clear();
+        korLine();
+        getline.SetScripts(lines, this);
     }
-    
+    public virtual void EndFunction()
+    {
+    }
+
+
 
 }

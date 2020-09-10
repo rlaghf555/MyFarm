@@ -25,10 +25,10 @@ public class CharacterCollider : MonoBehaviour
             return;
         colGameObject = other.gameObject;
         Debug.Log(colGameObject);
-        if(colGameObject.tag == "Portal")
-        {
-            OpenScript();
-        }
+        //if(colGameObject.tag == "Portal")
+        //{
+        //    OpenScript();
+        //}
         if(colGameObject.tag == "NPC"||colGameObject.tag == "Collectable"||colGameObject.tag=="Sign"||colGameObject.tag=="Building")
         {
             openScriptButton.SetActive(true);

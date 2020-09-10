@@ -362,7 +362,41 @@ public class Farming_Control : MonoBehaviour
             }
         }
     }
+    public void LoadBuilding(Grid_Save grid_Save)
+    {
+        Transform newobject = gridSetting.mainArray[grid_Save.grid_x].subArray[grid_Save.grid_z].transform;
+        GameObject load_object = Instantiate(Build_Prefabs[(int)grid_Save.build_object], newobject.transform.position, Quaternion.identity);
+        load_object.transform.SetParent(newobject.transform);
+        if(grid_Save.build_object == BUILD_OBJECT.DIRT_ROW)
+        {
+            Dirt_Row dirt_Row = load_object.GetComponent<Dirt_Row>();
+            if(grid_Save.plant_type!=ITEM_PLANT_TYPE.NULL)
+            dirt_Row.Plant_Crop(grid_Save.plant_type);
+            dirt_Row.plant_type = grid_Save.plant_type;
+            if(dirt_Row.Get_Planted_Crop()!=null)
+            dirt_Row.Get_Planted_Crop().GetComponent<Crops>().passed_day = grid_Save.passed_day;
+        }
+        Building_Object tmp_build = load_object.GetComponent<Building_Object>();
 
+        tmp_build.grid_x = grid_Save.grid_x;
+        tmp_build.grid_z = grid_Save.grid_z;
+
+        for (int x = 0; x < tmp_build.size_x; x++)
+        {
+            for (int z = 0; z < tmp_build.size_z; z++)
+            {
+                if (tmp_build.grid_x + x >= gridSetting.mainArray.Length)
+                {
+                    continue;
+                }
+                if (tmp_build.grid_z + z >= gridSetting.mainArray[tmp_build.grid_x + x].subArray.Length)
+                {
+                    continue;
+                }
+                gridSetting.mainArray[tmp_build.grid_x + x].subArray[tmp_build.grid_z + z].GetComponentInChildren<Grid>().buildable = false;
+            }
+        }
+    }
     public void Planting_Crop_On_DirtRow(UI_Item ui_Item)
     {
         if(mode == FARMING_MODE.PLANTING)
@@ -550,14 +584,16 @@ public class Farming_Control : MonoBehaviour
         {
             Destroy(building_object);
             build_buttons.SetActive(false);
-
+            building_object = null;
+            selected_object = null;
             mode = FARMING_MODE.DEFAULT;
         }
         if (mode == FARMING_MODE.MODIFY)
         {
             Destroy(building_object);
             build_buttons.SetActive(false);
-
+            building_object = null;
+            selected_object = null;
             mode = FARMING_MODE.DEFAULT;
         }
         if (mode == FARMING_MODE.PLANTING)
@@ -567,6 +603,8 @@ public class Farming_Control : MonoBehaviour
              tmp_dirt_row.plant_type = ITEM_PLANT_TYPE.NULL;
              tmp_dirt_row.DestroyCrop();
              build_buttons.SetActive(false);
+            building_object = null;
+            selected_object = null;
 
         }
         gridSetting.GridReset();

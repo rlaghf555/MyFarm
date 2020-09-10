@@ -10,7 +10,7 @@ public class Dirt_Row_Line : Line
         dirt = GetComponent<Dirt_Row>();
     }
 
-    void korLine()
+    override public void korLine()
     {
         lines.Add("각종 작물을 심을 수 있는 밭");
         if(dirt.plant_type != ITEM_PLANT_TYPE.NULL)
@@ -24,7 +24,7 @@ public class Dirt_Row_Line : Line
         }
 
     }
-    void engLine()
+    override public void engLine()
     {
         lines.Add("A field for planting various crops");
         if (dirt.plant_type != ITEM_PLANT_TYPE.NULL)
@@ -38,10 +38,4 @@ public class Dirt_Row_Line : Line
         }
     }
 
-    override public void SetScripts()
-    {
-        lines.Clear();
-        korLine();
-        getline.SetScripts(lines);
-    }
 }
