@@ -50,7 +50,15 @@ public class UI_Build : MonoBehaviour
     {
 
         //Debug.Log(FindObjectOfType<UI_Inventory>().inventory_Items_Plants[1].num);
-        i_num = Resources.FindObjectsOfTypeAll<UI_Inventory>()[0].inventory_Items_Plants[(int)item_plant_type].num;
+        //i_num = Resources.FindObjectsOfTypeAll<UI_Inventory>()[0].inventory_Items_Plants[(int)item_plant_type].num;
+        foreach (UI_ITEM_PLANT_INFO myinventory in FindObjectOfType<CharacterData>().inGameData.items)
+        {
+            if (myinventory.itemType == item_plant_type)
+            {
+                i_num = myinventory.num;
+                break;
+            }
+        }
         SetNumText();
     }
 

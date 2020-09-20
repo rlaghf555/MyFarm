@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/World End.unity
     guid: 99030bedffd6cbe49a6b5b2de5826502
+  - enabled: 1
+    path: Assets/Scenes/Wheat Field.unity
+    guid: 1c0a9e4e1773a284ead024333474d42d
   m_configObjects: {}

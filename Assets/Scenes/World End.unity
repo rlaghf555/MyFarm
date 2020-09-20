@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -86,7 +86,7 @@ LightmapSettings:
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVREnvironmentMIS: 0
+    m_PVREnvironmentMIS: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -6106,6 +6106,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Objects
       objectReference: {fileID: 0}
+    - target: {fileID: 5563126111879498727, guid: d98fa86cbdc6ed34ab63de0c801a6bd5,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563126111879498727, guid: d98fa86cbdc6ed34ab63de0c801a6bd5,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0.19607843
+      objectReference: {fileID: 0}
     - target: {fileID: 8158417126189085630, guid: d98fa86cbdc6ed34ab63de0c801a6bd5,
         type: 3}
       propertyPath: m_IsActive
@@ -9193,7 +9203,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfd913edcd2aee24a92b63a78785389d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Line_Num: -1
   lines: []
+  korLines:
+  - "\uB545\uB05D\uC5D0 \uC628\uAC78 \uD658\uC601\uD574"
+  - "\uC774 \uB108\uBA38\uC5D0 \uBB50\uAC00 \uC788\uB294\uC9C0\uB294 \uB098\uB3C4
+    \uBAB0\uB77C"
+  - "\uADF8\uB798\uB3C4 \uB5A0\uB0A0\uAEBC\uB2C8?"
+  engLines:
+  - Welcome to the end of the world
+  - I don't know what's out there
+  - Do you still want to leave?
   DeletePanel: {fileID: 915551693}
 --- !u!65 &1452131236997807
 BoxCollider:

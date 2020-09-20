@@ -20,11 +20,12 @@ public class GameController : MonoBehaviour
     public UI_Inventory ui_inventory;
     private GameObject collectableObject;
     private ACT_BUTTON_STATE actButtonState;
+
     //public SaveData saveData;
     // Start is called before the first frame update
     void Start()
     {        
-       
+       //FindObjectOfType<Skybox>().material = 
     }
     private void Awake()
     {

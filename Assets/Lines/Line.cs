@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Line : MonoBehaviour
 {
-
+    public int Line_Num;
     public List<string> lines;
+    public string[] korLines;
+    public string[] engLines;
     protected GetLine getline;
 
     // Start is called before the first frame update
@@ -15,11 +17,17 @@ public class Line : MonoBehaviour
     }
     public virtual void korLine()
     {
-
+        foreach(string s in korLines)
+        {
+            lines.Add(s);
+        }
     }
     public virtual void engLine()
     {
-
+        foreach (string s in engLines)
+        {
+            lines.Add(s);
+        }
     }
     public virtual void SetScripts()
     {

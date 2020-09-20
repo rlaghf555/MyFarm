@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 [SerializeField]
 public enum BUILD_OBJECT
@@ -26,6 +27,12 @@ public class Farming_Control : MonoBehaviour
     public FARMING_MODE mode;
     public Vector3 button_offset;
     public bool planting_ready = false;
+    public Image Ground_Button;
+    public Image Crops_Button;
+    public Image Building_Button;
+    public Image Tree_Button;
+    public Color selected_Color;
+    public Color unselected_Color;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +48,8 @@ public class Farming_Control : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (EventSystem.current.IsPointerOverGameObject())
+                    return;
                 RaycastHit hit;
                 //Debug.Log("down");
                 Ray ray = Farming_Camera.ScreenPointToRay(Input.mousePosition);
@@ -148,6 +157,7 @@ public class Farming_Control : MonoBehaviour
                             {
                                 selected_object.GetComponent<Grid>().Able();
                                 building_object.transform.position = selected_object.transform.parent.position;
+
                                 gridSetting.GridReset();
                                 Building_Grid_Check();
 
@@ -156,11 +166,8 @@ public class Farming_Control : MonoBehaviour
                     }
                 }
             }
-
                 build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(building_object.transform.position+building_object.GetComponent<BoxCollider>().center) + button_offset;
-           
-          
-        }
+            }
         else if(mode== FARMING_MODE.MODIFY)
         {
 
@@ -215,6 +222,7 @@ public class Farming_Control : MonoBehaviour
                             {
                                 selected_object.GetComponent<Grid>().Modifying();
                                 building_object.transform.position = selected_object.transform.parent.position;
+
                                 gridSetting.GridReset();
                                 Building_Grid_Check();
 
@@ -222,8 +230,7 @@ public class Farming_Control : MonoBehaviour
                         }
                     }
                 }
-            }
-           
+            }           
                 build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(selected_object.transform.position + selected_object.GetComponent<BoxCollider>().center) + button_offset;
 
         }
@@ -275,16 +282,47 @@ public class Farming_Control : MonoBehaviour
             {
                 if (selected_object.GetComponent<Dirt_Row>().plant_type != ITEM_PLANT_TYPE.NULL)
                 {
-                    build_buttons.SetActive(true);
                     build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(selected_object.transform.position + selected_object.GetComponent<BoxCollider>().center) + button_offset;
+                    build_buttons.SetActive(true);
                 }
             }
+        }
+    }
+    public void SetButtonColor(Image buttonimage)
+    {
+        if(Ground_Button == buttonimage)
+        {
+            Ground_Button.color=selected_Color;
+            Crops_Button.color = unselected_Color;
+            Building_Button.color = unselected_Color;
+            Tree_Button.color = unselected_Color;
+        }
+        if (Crops_Button == buttonimage)
+        {
+            Ground_Button.color = unselected_Color;
+            Crops_Button.color = selected_Color;
+            Building_Button.color = unselected_Color;
+            Tree_Button.color = unselected_Color;
+        }
+        if (Building_Button == buttonimage)
+        {
+            Ground_Button.color = unselected_Color;
+            Crops_Button.color = unselected_Color;
+            Building_Button.color = selected_Color;
+            Tree_Button.color = unselected_Color;
+        }
+        if (Tree_Button == buttonimage)
+        {
+            Ground_Button.color = unselected_Color;
+            Crops_Button.color = unselected_Color;
+            Building_Button.color = unselected_Color;
+            Tree_Button.color = selected_Color;
         }
     }
     public void Set_FarmingMode_Planting()
     {
         mode = FARMING_MODE.PLANTING;
-        if (building_object.transform.parent == null)
+        if (building_object != null&&building_object.transform.parent == null)
             Destroy(building_object);
         gridSetting.GridReset();
         building_object = null;
@@ -293,7 +331,7 @@ public class Farming_Control : MonoBehaviour
     public void Set_FarmingMode_Default()
     {
         mode = FARMING_MODE.DEFAULT;
-        if (building_object.transform.parent == null)
+        if (building_object!=null&&building_object.transform.parent == null)
             Destroy(building_object);
         gridSetting.GridReset();
         building_object = null;
@@ -423,7 +461,9 @@ public class Farming_Control : MonoBehaviour
     }
     public bool Building_Grid_Check()
     {
+        build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(building_object.transform.position + building_object.GetComponent<BoxCollider>().center) + button_offset;
         build_buttons.SetActive(true);
+
         bool value = true;
         Building_Object tmp_build = building_object.GetComponent<Building_Object>();
  
@@ -463,6 +503,7 @@ public class Farming_Control : MonoBehaviour
     }
     public bool Select_Grid_Check()
     {
+        build_buttons.transform.position = Farming_Camera.WorldToScreenPoint(selected_object.transform.position + selected_object.GetComponent<BoxCollider>().center) + button_offset;
         build_buttons.SetActive(true);
         bool value = true;
         Building_Object tmp_build = selected_object.GetComponent<Building_Object>();

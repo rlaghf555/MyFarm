@@ -246,13 +246,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kor_Name: "\uB545\uCF69 \uD638\uBC15"
   Eng_Name: Butternut Squash
-  Kor_Text: "\uB9DB\uC788\uB294 \uC0AC\uACFC\uB2E4\n\uC0AC\uC6A9: \uCCB4\uB825+10"
-  Eng_Text: 'This is delicious apple
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:500G"
+  Eng_Text: 'Growth period:7Days
 
-    use: Health+10'
+    Cost:500G'
   t_num: {fileID: 7537879480323737704}
   i_num: 0
-  item_plant_type: 0
+  cost: 500
+  item_plant_type: 27
 --- !u!114 &-5348437155837161240
 MonoBehaviour:
   m_ObjectHideFlags: 0

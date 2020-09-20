@@ -9,7 +9,7 @@ public class Farming_Camera : MonoBehaviour
     public float speed = 10.0f;
     [Range(0.001f, 1.0f)]
     public float SmoothFactor = 0.5f;
-   
+    public bool CameraTouch = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,12 +34,14 @@ public class Farming_Camera : MonoBehaviour
             {
                 if (hitInfo.collider.tag == "CameraTouch2")
                 {
-                    Debug.Log("touch");
                     Vector3 newPos = transform.position;
                     newPos.x += Input.GetTouch(0).deltaPosition.x * (speed * 0.01f);
+                    newPos.z -= Input.GetTouch(0).deltaPosition.x * (speed * 0.01f);
+
                     newPos.y = Camerapos.position.y;
-                    newPos.z += Input.GetTouch(0).deltaPosition.y * (speed * 0.01f) ;
-                   
+                    newPos.x += Input.GetTouch(0).deltaPosition.y * (speed * 0.01f);
+                    newPos.z += Input.GetTouch(0).deltaPosition.y * (speed * 0.01f);
+
                     if (newPos.x < -70)
                         newPos.x = -70;
                     if (newPos.x > 80)
@@ -49,7 +51,9 @@ public class Farming_Camera : MonoBehaviour
                     if (newPos.z > 25)
                         newPos.z = 25;
                     transform.position = newPos;
+                    CameraTouch = true;
                 }
+                else CameraTouch = false;
                 // Here you can check hitInfo to see which collider has been hit, and act appropriately.
             }
 
@@ -70,10 +74,10 @@ public class Farming_Camera : MonoBehaviour
                     newPos.x += Input.GetAxis("Mouse X") * speed;
                     newPos.z -= Input.GetAxis("Mouse X") * speed;
                     newPos.y = Camerapos.position.y;
-                
+
                     newPos.x += Input.GetAxis("Mouse Y") * speed;
                     newPos.z += Input.GetAxis("Mouse Y") * speed;
-                    
+
                     if (newPos.x < -70)
                         newPos.x = -70;
                     if (newPos.x > 80)
@@ -83,9 +87,11 @@ public class Farming_Camera : MonoBehaviour
                     if (newPos.z > 25)
                         newPos.z = 25;
                     transform.position = newPos;
+                    CameraTouch = true;
                     // transform.position = Vector3.Slerp(transform.position, newPos, SmoothFactor);
-                   
+
                 }
+                else CameraTouch = false;
                 // Here you can check hitInfo to see which collider has been hit, and act appropriately.
             }
 

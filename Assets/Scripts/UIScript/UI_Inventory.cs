@@ -31,7 +31,7 @@ public class UI_Inventory : MonoBehaviour
     void Update()
     {
     }
-    public void SetInventory()
+    public virtual void SetInventory()
     {
         characterData = FindObjectOfType<CharacterData>();
         int n =Plant_Content.transform.childCount;
@@ -41,16 +41,17 @@ public class UI_Inventory : MonoBehaviour
         }
         if (characterData)
         {
-            foreach(UI_ITEM_PLANT_INFO item in inventory_Items_Plants)
-            {
-                item.itemType = ITEM_PLANT_TYPE.NULL;
-                item.num = 0;
-            }
-            for(int i = 0; i < inventory_Items_Plants.Length; i++)
-            {
-                inventory_Items_Plants[i].itemType= characterData.inGameData.items[i].itemType;
-                inventory_Items_Plants[i].num= characterData.inGameData.items[i].num;
-            }
+            //foreach(UI_ITEM_PLANT_INFO item in inventory_Items_Plants)
+            //{
+            //    item.itemType = ITEM_PLANT_TYPE.NULL;
+            //    item.num = 0;
+            //}
+            inventory_Items_Plants = characterData.inGameData.items;
+            //for(int i = 0; i < inventory_Items_Plants.Length; i++)
+            //{
+            //    inventory_Items_Plants[i].itemType= characterData.inGameData.items[i].itemType;
+            //    inventory_Items_Plants[i].num= characterData.inGameData.items[i].num;
+            //}
             for (int i = 0, j = 0; i < inventory_Items_Plants.Length; i++)
             {
                 if (inventory_Items_Plants[i].itemType == ITEM_PLANT_TYPE.NULL)

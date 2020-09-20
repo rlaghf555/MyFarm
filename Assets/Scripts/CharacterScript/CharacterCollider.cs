@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CharacterCollider : MonoBehaviour
 {
-    [HideInInspector]
+    //[HideInInspector]
     public GameObject colGameObject;
     public GameObject lines;
     public GameObject openScriptButton;
+    public GameObject TradeButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,10 @@ public class CharacterCollider : MonoBehaviour
         {
             openScriptButton.SetActive(true);
         }
+        if(colGameObject.tag == "NPC")
+        {
+            TradeButton.SetActive(true);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
@@ -41,10 +46,10 @@ public class CharacterCollider : MonoBehaviour
         if (colGameObject == null)
             return;
         if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable" || colGameObject.tag == "Sign" || colGameObject.tag == "Building")
-        {
-
-            
+        {            
             openScriptButton.SetActive(false);
+            TradeButton.SetActive(false);
+
         }
         colGameObject = null;
     }

@@ -34,6 +34,7 @@ public class SaveData
     public string filename;
     public List<Quest_Save> quests;
     public List<Grid_Save> grid_Saves;
+    public int gold=500;
     public SaveData()
     {
         quests = new List<Quest_Save>();
