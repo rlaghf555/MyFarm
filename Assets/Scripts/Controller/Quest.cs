@@ -5,7 +5,7 @@ using System.Collections;
 public struct Quest_Content
 {
     public ITEM_PLANT_TYPE Quest_Item;
-    public int Required_Num;
+    public int Num;
 }
 [System.Serializable]
 public enum QUEST_STATE
@@ -27,13 +27,39 @@ public class Quest : MonoBehaviour
     [Tooltip("퀘스트 완료 캐릭터")]
     public int End_Character;
     public Quest_Content[] Quest_Contents;
+    public Quest_Content Return_Item;
+    public int Return_Gold;
     public QUEST_STATE quest_state;
+    public Line start_line;
+    public Line end_line;
     public bool Is_Quest_Clear()
     {
-        foreach(Quest_Content qc in Quest_Contents)
+        int contents_num = Quest_Contents.Length;
+        int check_num = 0;
+        foreach (Quest_Content qc in Quest_Contents)
         {
-
+            UI_ITEM_PLANT_INFO[] inventory = FindObjectOfType<CharacterData>().inGameData.items;
+            for(int i = 0; i < inventory.Length; i++)
+            {
+                if(qc.Quest_Item == inventory[i].itemType) // 퀘스트 아이템 확인
+                {
+                    if (qc.Num <= inventory[i].num) //퀘스트 아이템 갯수 확인
+                    {
+                        check_num++;
+                        break;
+                    }
+                }
+            }
         }
-        return true;
+        if (contents_num == check_num)
+        {
+            return true;
+        }
+        else return false;
+
+    }
+    public void QuestClear()
+    {
+
     }
 }

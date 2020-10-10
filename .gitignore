@@ -58,5 +58,11 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-Assets/Scenes/MyFarm/LightingData.asset
-Assets/Scenes/T_Section/LightingData.asset
+Assets/Scenes/MyFarm
+Assets/Scenes/T_Section
+Assets/Scenes/Menu
+Assets/Scenes/Fruit Farm
+Assets/Scenes/Village
+Assets/Scenes/Wheat Field
+Assets/Scenes/World End
+Assets/Scenes/Mystery Forest

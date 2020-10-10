@@ -13,11 +13,6 @@ public class Portal : MonoBehaviour
         levelLoader = FindObjectOfType<LevelLoader>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("TriggerEnter");
