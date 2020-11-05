@@ -20,6 +20,8 @@ public class Portal : MonoBehaviour
         {
             if(!levelLoader)
                 levelLoader = FindObjectOfType<LevelLoader>();
+            if(FindObjectOfType<CharacterData>())
+                FindObjectOfType<CharacterData>().BeforeScene = SceneManager.GetActiveScene().name;
             levelLoader.LoadLevel(scene);
 
         }

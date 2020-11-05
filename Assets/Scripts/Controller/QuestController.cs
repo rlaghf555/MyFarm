@@ -31,7 +31,7 @@ public class QuestController : MonoBehaviour
     {
         Quest_Name_Text.text = quests[Quest_Num].Kor_Name;
         Quest_Text.text = quests[Quest_Num].Kor_Text;
-        Quest_Client_Portrait.sprite = portraits[quests[Quest_Num].Start_Character];
+        Quest_Client_Portrait.sprite = portraits[quests[Quest_Num].End_Character];
         Control_UI.SetActive(false);
         Quest_List.SetActive(false);
         Quest_Panel.SetActive(true);
@@ -59,5 +59,38 @@ public class QuestController : MonoBehaviour
                 newObject.GetComponent<Quest_Accepted>().Set_Quest(q);
             }
         }
+    }
+    public Line FindQuestLine(int CharacterNum)
+    {
+        Debug.Log("findquestline" +CharacterNum);
+        //클리어 가능한가
+        foreach(Quest q in quests)
+        {
+            if (q.quest_state == QUEST_STATE.ACCEPT)
+            {
+                if (q.End_Character == CharacterNum)
+                {
+                    if (q.Is_Quest_Clear())
+                    {
+                        q.quest_state = QUEST_STATE.CLEAR;
+                        Debug.Log("Clear");
+                        return q.end_line;
+                    }
+                }
+            }
+            else if (q.quest_state == QUEST_STATE.ABLE)
+            {
+                if (q.Start_Character == CharacterNum)
+                {
+                    q.quest_state = QUEST_STATE.ACCEPT;
+                    Debug.Log("Accept");
+
+                    return q.start_line;
+                }
+            }
+        }
+        Debug.Log("NULL");
+
+        return null;
     }
 }

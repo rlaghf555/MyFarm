@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7234464841859338172}
   - component: {fileID: 4723933149540213734}
+  - component: {fileID: 5192395361999757127}
   m_Layer: 0
-  m_Name: Quest 2
+  m_Name: Quest 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,16 +47,49 @@ MonoBehaviour:
   Quest_Num: 1
   Kor_Name: "\uC774\uC6C3\uC5D0\uAC8C \uC778\uC0AC\uD558\uAE30"
   Eng_Name: Meet your neighbor
-  Kor_Text: "\uCF58\uD544\uB4DC\n\uB2F9\uC2E0\uC740 \uC624\uB298 \uC0C8\uB85C \uB9C8\uC744\uC5D0
-    \uC774\uC0AC\uC654\uC2B5\uB2C8\uB2E4.asdfasdfasdfasdfasdfasdfasdf\n\uC606\uC9D1\uC758
-    \uCF58\uD544\uB4DC \uC544\uC800\uC528\uB97C \uB9CC\uB098\uBCF4\uC138\uC694."
-  Eng_Text: '
+  Kor_Text: "\uC0AC\uB77C\n\uB2F9\uC2E0\uC740 \uC0C8\uB85C \uC774\uC0AC\uC654\uC2B5\uB2C8\uB2E4.\n\n\uC606\uC9D1\uC758
+    \uC0AC\uB77C \uB9CC\uB098\uAE30"
+  Eng_Text: 'Sarah
 
-    You moved into the village today.
+    You''re new here.
 
-    Meet Uncle Confield next
-    door.'
+
+    Meet Sarah next door.'
   Start_Character: 1
-  End_Character: 1
-  Quest_Contents: []
+  End_Character: 2
+  Quest_Require_Contents: []
+  Quest_Require_Gold: 0
+  Quest_Receive_Contents: []
+  Quest_Return_Contents: []
+  Return_Gold: 0
   quest_state: 0
+  start_line: {fileID: 0}
+  end_line: {fileID: 5192395361999757127}
+--- !u!114 &5192395361999757127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 2
+  lines: []
+  korLines:
+  - "\uC544! \uBC18\uAC00\uC6CC."
+  - "\uB108\uAC00 \uC774\uBC88\uC5D0 \uC0C8\uB85C\uC628 \uCE5C\uAD6C\uAD6C\uB098?"
+  - "\uD3B8\uC548\uD558\uAC8C \uB18D\uC7A5\uC0DD\uD65C\uC744 \uC990\uAE30\uB3C4\uB85D
+    \uD574."
+  - "\uC8FC\uBCC0 \uC0AC\uB78C\uB4E4\uACFC \uC778\uC0AC\uB97C \uB098\uB204\uB294
+    \uC911\uC774\uB77C\uACE0?"
+  - "\uBD81\uCABD \uD574\uBC14\uB77C\uAE30 \uC0BC\uAC70\uB9AC\uC5D0\uC11C \uB9C8\uC774\uD074\uC744
+    \uB9CC\uB098\uBD10."
+  engLines:
+  - 
+  - 
+  Next_Quest_ABLE_Num: 02000000
+  Next_Quest_ACCEPT_Num: 03000000

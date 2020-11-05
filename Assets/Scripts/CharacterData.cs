@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharacterData :MonoBehaviour
 {
     public SaveData inGameData;
+    public string BeforeScene=null;
     public void Save()
     {
         //가방 저장
@@ -93,13 +94,7 @@ public class CharacterData :MonoBehaviour
         };
         try
         {
-            //퀘스트 불러오기
-            Quest[] quests = FindObjectOfType<QuestController>().quests;
-            foreach (Quest_Save q in inGameData.quests)
-            {
-                quests[q.Quest_num].quest_state = q.quest_state;
-            }
-            Debug.Log("Load Quest");
+            SetQuest();
         }
         catch
         {
@@ -133,6 +128,17 @@ public class CharacterData :MonoBehaviour
             Debug.Log("Load Building failed");
 
         }
+    }
+
+    public void SetQuest()
+    {
+        //퀘스트 불러오기
+        Quest[] quests = FindObjectOfType<QuestController>().quests;
+        foreach (Quest_Save q in inGameData.quests)
+        {
+            quests[q.Quest_num].quest_state = q.quest_state;
+        }
+        Debug.Log("Load Quest");
     }
 
 }

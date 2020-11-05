@@ -2067,6 +2067,7 @@ GameObject:
   - component: {fileID: 3190245751104188644}
   - component: {fileID: 3190245751104188645}
   - component: {fileID: 3190245751104188646}
+  - component: {fileID: 4722032712367606507}
   m_Layer: 0
   m_Name: Sarah
   m_TagString: NPC
@@ -2154,6 +2155,87 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character_Num: 2
+--- !u!114 &4722032712367606507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190124020877855889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a84fd94bbdfda499615548c247be87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory_Items_Plants:
+  - itemType: 23
+    num: 1
+  - itemType: 6
+    num: 1
+  - itemType: 9
+    num: 1
+  - itemType: 7
+    num: 1
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  Plant_Content: {fileID: 0}
+  item_plants_prefabs: []
 --- !u!1 &3190139670432834139
 GameObject:
   m_ObjectHideFlags: 0

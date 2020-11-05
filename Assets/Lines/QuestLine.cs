@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class QuestLine : MonoBehaviour
+public class QuestLine : Line
 {
     public int[] Next_Quest_ABLE_Num;
     public int[] Next_Quest_ACCEPT_Num;
 
-    public virtual void EndFunction()
+    public override void EndFunction()
     {
         Quest[] quests = FindObjectOfType<QuestController>().quests;
 

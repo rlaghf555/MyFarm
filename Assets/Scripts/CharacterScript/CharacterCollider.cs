@@ -9,6 +9,7 @@ public class CharacterCollider : MonoBehaviour
     public GameObject lines;
     public GameObject openScriptButton;
     public GameObject TradeButton;
+    public QuestController questController;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,11 +59,22 @@ public class CharacterCollider : MonoBehaviour
         lines.SetActive(true);
         Debug.Log(colGameObject+"openscript");
 
-        colGameObject.GetComponent<Line>().SetScripts();
         if(colGameObject.tag == "NPC")
         {
+            int character_num = colGameObject.GetComponent<Character>().Character_Num;
+            Line questline = questController.FindQuestLine(character_num);
+            Debug.Log("line_num = "+questline.Line_Num);
+            Debug.Log(questline.korLines[0]);
+            if(questline != null)
+            {
+                questline.SetScripts();
+            }
             colGameObject.GetComponent<Animator>().SetTrigger("Talk_Start");
-            colGameObject.GetComponent<LookCharacter>().enabled = true;
+            //colGameObject.GetComponent<LookCharacter>().enabled = true;
+        }
+        if (colGameObject.GetComponent<Line>())
+        {
+            colGameObject.GetComponent<Line>().SetScripts();
         }
     }
     public void EndScript()
@@ -70,7 +82,7 @@ public class CharacterCollider : MonoBehaviour
         if (colGameObject.tag == "NPC")
         {
             colGameObject.GetComponent<Animator>().SetTrigger("Talk_End");
-            colGameObject.GetComponent<LookCharacter>().enabled = false;
+            //colGameObject.GetComponent<LookCharacter>().enabled = false;
         }
     }
 }

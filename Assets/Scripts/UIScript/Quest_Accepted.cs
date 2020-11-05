@@ -17,7 +17,7 @@ public class Quest_Accepted : MonoBehaviour
     {
         quest = q;
         questController = FindObjectOfType<QuestController>();
-        image.sprite = questController.portraits[q.Start_Character];
+        image.sprite = questController.portraits[q.End_Character];
         quest_name.text = q.Kor_Name;
         //quest_name.text = q.Eng_Name;
     }

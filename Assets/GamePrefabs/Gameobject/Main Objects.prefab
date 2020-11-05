@@ -8341,6 +8341,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 21300000, guid: 289743be2df89764ab6a080afe8b0660, type: 3}
   - {fileID: 21300000, guid: 0913cb23fabd1254f9ca2dc7a70324b5, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 0a3fd7dbac5dea74e881177ccfa9d609, type: 3}
+  - {fileID: 21300000, guid: cab5763006558404794ff33f004cf13a, type: 3}
+  - {fileID: 21300000, guid: d3cf322aa11fdd544b2200e4f2ceeab0, type: 3}
+  - {fileID: 21300000, guid: bdbc77c76f008954eb6432342824aef5, type: 3}
+  - {fileID: 21300000, guid: 5664f3569fb411449b3b35715ca10df5, type: 3}
+  - {fileID: 21300000, guid: 87c32c5350214e541b1c05352f4161d6, type: 3}
+  - {fileID: 21300000, guid: 22f595b55af28dd48b58fcb2c7ffa06f, type: 3}
+  - {fileID: 21300000, guid: a4d929d77c4924a4381916744a1b760b, type: 3}
+  - {fileID: 21300000, guid: 966b0122d5aff8f4d9a2b9ecb3dfa388, type: 3}
+  - {fileID: 21300000, guid: 2a4c714ebf5cb6347be6727204c3360f, type: 3}
+  - {fileID: 21300000, guid: c5415d39299c61c49bb4b33e784507e3, type: 3}
   Quest_List_Content: {fileID: 5288429036615933714}
   Quest_Accept_Prefab: {fileID: 600313442902350713, guid: 33daa3a74b93e1e4e9f136f09f947fe7,
     type: 3}
@@ -8651,7 +8664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7060dd150df8345850a37500b2afa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnpos: {fileID: 0}
   character: {fileID: 2915382224972720144}
   axeButton: {fileID: 2915382223868408063}
   spadeButton: {fileID: 4937120024223817655}
@@ -9172,7 +9184,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2915382225162445858}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.33298412, y: 0, z: 0, w: 0.9429325}
   m_LocalPosition: {x: 1.9, y: 5.15, z: 2.815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

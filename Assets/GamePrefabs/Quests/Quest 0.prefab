@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7234464841859338172}
   - component: {fileID: 4723933149540213734}
+  - component: {fileID: 5068919827884037373}
   m_Layer: 0
-  m_Name: Quest 1
+  m_Name: Quest 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,16 +47,47 @@ MonoBehaviour:
   Quest_Num: 0
   Kor_Name: "\uC774\uC6C3\uC5D0\uAC8C \uC778\uC0AC\uD558\uAE30"
   Eng_Name: Meet your neighbor
-  Kor_Text: "\uCF58\uD544\uB4DC\n\uB2F9\uC2E0\uC740 \uC624\uB298 \uC0C8\uB85C \uB9C8\uC744\uC5D0
-    \uC774\uC0AC\uC654\uC2B5\uB2C8\uB2E4.\n\uC606\uC9D1\uC758 \uCF58\uD544\uB4DC
-    \uC544\uC800\uC528\uB97C \uB9CC\uB098\uBCF4\uC138\uC694."
+  Kor_Text: "\uCF58\uD544\uB4DC\n\uB2F9\uC2E0\uC740 \uC0C8\uB85C \uC774\uC0AC\uC654\uC2B5\uB2C8\uB2E4.\n\n\uC606\uC9D1\uC758
+    \uCF58\uD544\uB4DC \uB9CC\uB098\uAE30"
   Eng_Text: 'Uncle Confield
 
-    You moved into the village today.
+    You''re new here.
 
-    Meet Uncle
-    Confield next door.'
+
+    Meet Uncle Confield next
+    door.'
   Start_Character: 1
   End_Character: 1
-  Quest_Contents: []
+  Quest_Require_Contents: []
+  Quest_Require_Gold: 0
+  Quest_Receive_Contents: []
+  Quest_Return_Contents: []
+  Return_Gold: 0
   quest_state: 1
+  start_line: {fileID: 0}
+  end_line: {fileID: 5068919827884037373}
+--- !u!114 &5068919827884037373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 1
+  lines: []
+  korLines:
+  - "\uC624! \uBC18\uAC11\uB124."
+  - "\uC790\uB124\uAC00 \uC774\uBC88\uC5D0 \uC0C8\uB85C\uC628 \uCE5C\uAD6C\uB85C\uAD70."
+  - "\uC798 \uC9C0\uB0B4\uBCF4\uC790\uACE0."
+  - "\uC74C... \uC6B0\uC120 \uC774\uC6C3\uB4E4\uACFC \uC778\uC0AC\uB97C \uB098\uB204\uB294\uAC74
+    \uC5B4\uB5A4\uAC00?"
+  - "\uC800\uAE30 \uC55E \uC9D1\uC5D0 \uC0AC\uB77C\uB97C \uB9CC\uB098\uBCF4\uAC8C."
+  engLines:
+  - 
+  Next_Quest_ABLE_Num: 
+  Next_Quest_ACCEPT_Num: 01000000

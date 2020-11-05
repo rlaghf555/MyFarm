@@ -899,6 +899,7 @@ GameObject:
   - component: {fileID: 4054767131825536537}
   - component: {fileID: 4054767131825536614}
   - component: {fileID: 4054767131825536536}
+  - component: {fileID: 9150897476431729658}
   m_Layer: 0
   m_Name: Uncle Confield
   m_TagString: NPC
@@ -999,6 +1000,87 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 0}
+--- !u!114 &9150897476431729658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4053646551554841536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a84fd94bbdfda499615548c247be87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory_Items_Plants:
+  - itemType: 12
+    num: 5
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  - itemType: 0
+    num: 0
+  Plant_Content: {fileID: 0}
+  item_plants_prefabs: []
 --- !u!1 &4053646990830079460
 GameObject:
   m_ObjectHideFlags: 0

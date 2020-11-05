@@ -10,7 +10,7 @@ public enum ACT_BUTTON_STATE
 };
 public class GameController : MonoBehaviour
 {
-    public Transform spawnpos;
+    //public Transform spawnpos;
     public Transform character;
     public GameObject axeButton;
     public GameObject spadeButton;
@@ -29,8 +29,8 @@ public class GameController : MonoBehaviour
     }
     private void Awake()
     {
-        character.transform.position = spawnpos.position;
-        character.rotation = spawnpos.rotation;
+        //character.transform.position = spawnpos.position;
+        //character.rotation = spawnpos.rotation;
         actButtonState = ACT_BUTTON_STATE.DISABLE;
         //try
         //{

@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7423964518283820224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7234464841859338172}
+  - component: {fileID: 4723933149540213734}
+  m_Layer: 0
+  m_Name: Quest 8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7234464841859338172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -37.74038, y: -7.229197, z: -2.1286232}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4723933149540213734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc0d5d573342e440bd275720dfcb44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Quest_Num: 8
+  Kor_Name: "\uC774\uC6C3\uACFC \uC778\uC0AC\uD558\uAE30"
+  Eng_Name: Meet your neighbor
+  Kor_Text: "\uCF00\uBE48\n\uB2F9\uC2E0\uC740 \uC0C8\uB85C \uC774\uC0AC\uC654\uC2B5\uB2C8\uB2E4.\n\n\uACFC\uC218\uC6D0\uC758
+    \uCF00\uBE48 \uB9CC\uB098\uAE30"
+  Eng_Text: 'Kevin
+
+    You''re new here.
+
+
+    Meet Kevin on the Fruit Farm.'
+  Start_Character: 7
+  End_Character: 6
+  Quest_Require_Contents: []
+  Quest_Require_Gold: 0
+  Quest_Receive_Contents: []
+  Quest_Return_Contents: []
+  Return_Gold: 0
+  quest_state: 0
+  start_line: {fileID: 0}
+  end_line: {fileID: 0}

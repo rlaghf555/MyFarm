@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7234464841859338172}
   - component: {fileID: 4723933149540213734}
+  - component: {fileID: 4999607434993604618}
+  - component: {fileID: 7563736331094801003}
   m_Layer: 0
-  m_Name: Quest 3
+  m_Name: Quest 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,16 +46,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Quest_Num: 2
-  Kor_Name: "\uC774\uC6C3\uC5D0\uAC8C \uC778\uC0AC\uD558\uAE30"
-  Eng_Name: Meet your neighbor
-  Kor_Text: "\uC0AC\uB77C\n\uC0AC\uB77C\uC5D0\uAC8C \uC778\uC0AC\uD558\uC138\uC694."
-  Eng_Text: '
+  Kor_Name: "\uAC10\uC790 \uD0A4\uC6B0\uAE30"
+  Eng_Name: Raising potatoes
+  Kor_Text: "\uC0AC\uB77C\n\uAC10\uC790\uB97C \uD0A4\uC6CC\uBCF4\uC138\uC694.\n\n\uAC10\uC790
+    5\uAC1C \uAC00\uC838\uC624\uAE30"
+  Eng_Text: 'Sarah
 
-    You moved into the village today.
+    Raise potatoes.
 
-    Meet Uncle Confield next
-    door.'
+
+    Get 5 potatoes.'
   Start_Character: 2
   End_Character: 2
-  Quest_Contents: []
+  Quest_Require_Contents:
+  - itemType: 23
+    num: 5
+  Quest_Require_Gold: 0
+  Quest_Receive_Contents:
+  - itemType: 23
+    num: 1
+  Quest_Return_Contents: []
+  Return_Gold: 500
   quest_state: 0
+  start_line: {fileID: 4999607434993604618}
+  end_line: {fileID: 0}
+--- !u!114 &4999607434993604618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 0
+  lines: []
+  korLines:
+  - "\uC0C8\uB85C \uC654\uC73C\uB2C8 \uBAA8\uB974\uB294\uAC8C \uB9CE\uC9C0?"
+  - "\uAC10\uC790\uB97C \uD558\uB098 \uC904\uAC8C"
+  - "\uBC2D\uC744 \uB9CC\uB4E4\uC5B4\uC11C \uAC10\uC790\uB97C \uD0A4\uC6CC\uBD10"
+  engLines: []
+  Next_Quest_ABLE_Num: 
+  Next_Quest_ACCEPT_Num: 
+--- !u!114 &7563736331094801003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 0
+  lines: []
+  korLines:
+  - "\uAC10\uC790 \uD0A4\uC6B0\uAE30\uC5D0 \uC131\uACF5\uD588\uAD6C\uB098!"
+  - "\uCD95\uD558\uD574! \uC774\uC81C \uB108\uB3C4 \uD6CC\uB96D\uD55C \uB18D\uBD80\uC57C"
+  engLines: []
+  Next_Quest_ABLE_Num: 
+  Next_Quest_ACCEPT_Num: 
