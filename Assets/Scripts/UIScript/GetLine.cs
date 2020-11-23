@@ -37,6 +37,7 @@ public class GetLine : MonoBehaviour
             FindObjectOfType<CharacterMoveByJoystick>().enabled = true;
             characterCollider.EndScript();
             line.EndFunction();
+            text.text = "";
             lines.Clear();
             return;
         }

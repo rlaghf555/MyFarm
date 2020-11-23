@@ -35,10 +35,16 @@ public class UI_Build : MonoBehaviour
     }
     public void SetBuildInfo()
     {
-
-        GameObject.Find("Build Name").GetComponent<Text>().text = Kor_Name;
-        GameObject.Find("Build Text").GetComponent<Text>().text = Kor_Text;
-
+        if (FindObjectOfType<GameSetting>().gameSettingData.iskor)
+        {
+            GameObject.Find("Build Name").GetComponent<Text>().text = Kor_Name;
+            GameObject.Find("Build Text").GetComponent<Text>().text = Kor_Text;
+        }
+        else
+        {
+            GameObject.Find("Build Name").GetComponent<Text>().text = Eng_Name;
+            GameObject.Find("Build Text").GetComponent<Text>().text = Eng_Text;
+        }
     }
     public void SetNumText()
     {

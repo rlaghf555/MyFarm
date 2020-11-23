@@ -69,7 +69,7 @@ MonoBehaviour:
   Return_Gold: 500
   quest_state: 0
   start_line: {fileID: 4999607434993604618}
-  end_line: {fileID: 0}
+  end_line: {fileID: 7563736331094801003}
 --- !u!114 &4999607434993604618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Line_Num: 0
+  Line_Num: 3
   lines: []
   korLines:
   - "\uC0C8\uB85C \uC654\uC73C\uB2C8 \uBAA8\uB974\uB294\uAC8C \uB9CE\uC9C0?"
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Line_Num: 0
+  Line_Num: 4
   lines: []
   korLines:
   - "\uAC10\uC790 \uD0A4\uC6B0\uAE30\uC5D0 \uC131\uACF5\uD588\uAD6C\uB098!"

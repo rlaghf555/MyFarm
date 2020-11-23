@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7234464841859338172}
   - component: {fileID: 4723933149540213734}
+  - component: {fileID: 5471416339254620524}
   m_Layer: 0
   m_Name: Quest 3
   m_TagString: Untagged
@@ -63,4 +64,31 @@ MonoBehaviour:
   Return_Gold: 0
   quest_state: 0
   start_line: {fileID: 0}
-  end_line: {fileID: 0}
+  end_line: {fileID: 5471416339254620524}
+--- !u!114 &5471416339254620524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 5
+  lines: []
+  korLines:
+  - "\uCC98\uC74C \uBCF4\uB294 \uC5BC\uAD74\uC774\uB124?"
+  - "\uBC18\uAC00\uC6CC."
+  - "\uC774\uACF3\uC740 \uB9C8\uC74C\uC5D0 \uB4E4\uC5B4?"
+  - "\uC801\uC751\uC774 \uC548\uB420\uC9C0\uB3C4 \uBAA8\uB974\uC9C0\uB9CC \uC0AC\uB78C\uB4E4\uB3C4
+    \uC88B\uACE0 \uACF5\uAE30\uB3C4 \uC88B\uC544"
+  - "\uC11C\uCABD\uC73C\uB85C\uAC00\uBA74 \uBC00 \uB4E4\uD310, \uACFC\uC218\uC6D0,
+    \uB9C8\uC744\uC774 \uB098\uC640"
+  - "\uC6B0\uC120 \uBC00 \uB4E4\uD310\uC5D0 \uC81C\uC774\uD06C\uB97C \uB9CC\uB098\uBD10."
+  - "\uADF8\uB294 \uC880... \uC544\uB2C8\uB2E4."
+  engLines: []
+  Next_Quest_ABLE_Num: 04000000
+  Next_Quest_ACCEPT_Num: 05000000

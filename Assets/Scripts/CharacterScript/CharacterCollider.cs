@@ -56,19 +56,22 @@ public class CharacterCollider : MonoBehaviour
     }
     public void OpenScript()
     {
-        lines.SetActive(true);
         Debug.Log(colGameObject+"openscript");
 
         if(colGameObject.tag == "NPC")
         {
             int character_num = colGameObject.GetComponent<Character>().Character_Num;
             Line questline = questController.FindQuestLine(character_num);
+            if (questline == null)
+                return;
             Debug.Log("line_num = "+questline.Line_Num);
             Debug.Log(questline.korLines[0]);
-            if(questline != null)
+
+            if (questline != null)
             {
                 questline.SetScripts();
             }
+            
             colGameObject.GetComponent<Animator>().SetTrigger("Talk_Start");
             //colGameObject.GetComponent<LookCharacter>().enabled = true;
         }
@@ -76,6 +79,8 @@ public class CharacterCollider : MonoBehaviour
         {
             colGameObject.GetComponent<Line>().SetScripts();
         }
+        lines.SetActive(true);
+
     }
     public void EndScript()
     {

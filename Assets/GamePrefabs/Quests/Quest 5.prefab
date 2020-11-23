@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7234464841859338172}
   - component: {fileID: 4723933149540213734}
+  - component: {fileID: 983126403692896566}
   m_Layer: 0
   m_Name: Quest 5
   m_TagString: Untagged
@@ -63,4 +64,26 @@ MonoBehaviour:
   Return_Gold: 0
   quest_state: 0
   start_line: {fileID: 0}
-  end_line: {fileID: 0}
+  end_line: {fileID: 983126403692896566}
+--- !u!114 &983126403692896566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 8
+  lines: []
+  korLines:
+  - ...
+  - ... ...
+  - "\uC548\uB155."
+  - "\uBD81\uCABD\uC740 \uB9C8\uC744, \uC11C\uCABD\uC740 \uACFC\uC218\uC6D0\uC774\uB2E4."
+  engLines: []
+  Next_Quest_ABLE_Num: 
+  Next_Quest_ACCEPT_Num: 0600000007000000

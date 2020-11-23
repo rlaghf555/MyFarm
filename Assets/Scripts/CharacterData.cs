@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharacterData :MonoBehaviour
 {
     public SaveData inGameData;
+    public float time;
     public string BeforeScene=null;
     public void Save()
     {
@@ -128,17 +129,34 @@ public class CharacterData :MonoBehaviour
             Debug.Log("Load Building failed");
 
         }
+
+        FindObjectOfType<TimeController>().SetTime(time);
     }
 
     public void SetQuest()
     {
-        //퀘스트 불러오기
-        Quest[] quests = FindObjectOfType<QuestController>().quests;
-        foreach (Quest_Save q in inGameData.quests)
+        if (inGameData.quests.Count == 0)
         {
-            quests[q.Quest_num].quest_state = q.quest_state;
+            Quest[] quests = FindObjectOfType<QuestController>().quests;
+            foreach (Quest q in quests)
+            {
+                Quest_Save qs;
+                qs.Quest_num = q.Quest_Num;
+                qs.quest_state = q.quest_state;
+                inGameData.quests.Add(qs);
+            }
         }
-        Debug.Log("Load Quest");
+        else
+        {
+            //퀘스트 불러오기
+            Quest[] quests = FindObjectOfType<QuestController>().quests;
+            foreach (Quest_Save q in inGameData.quests)
+            {
+                quests[q.Quest_num].quest_state = q.quest_state;
+            }
+
+            Debug.Log("Load Quest");
+        }
     }
 
 }

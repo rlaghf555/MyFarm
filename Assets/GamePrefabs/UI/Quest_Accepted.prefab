@@ -355,11 +355,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 156bd35cdd66d334581b22459841c365, type: 3}
-    m_FontSize: 35
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 3
-    m_MaxSize: 35
+    m_MinSize: 0
+    m_MaxSize: 84
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

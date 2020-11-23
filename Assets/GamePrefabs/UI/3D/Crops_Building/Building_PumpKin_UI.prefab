@@ -158,12 +158,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kor_Name: "\uD638\uBC15"
   Eng_Name: Pumpkin
-  Kor_Text: "\uB9DB\uC788\uB294 \uC0AC\uACFC\uB2E4\n\uC0AC\uC6A9: \uCCB4\uB825+10"
-  Eng_Text: 'This is delicious apple
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:300G"
+  Eng_Text: 'Growth period:7Days
 
-    use: Health+10'
+    Cost:300G'
   t_num: {fileID: 1078833633548917806}
   i_num: 0
+  cost: 300
   item_plant_type: 25
 --- !u!114 &7377780241363332128
 MonoBehaviour:

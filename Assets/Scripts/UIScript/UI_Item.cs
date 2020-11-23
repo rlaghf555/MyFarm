@@ -25,8 +25,16 @@ public class UI_Item : MonoBehaviour
     {
         Item_Text = GameObject.Find("Item Text").GetComponent<TextMesh>();
         Item_Name = GameObject.Find("Item Name").GetComponent<TextMesh>();
-        Item_Text.text = Kor_Text;
-        Item_Name.text = Kor_Name;
+        if (FindObjectOfType<GameSetting>().gameSettingData.iskor)
+        {
+            Item_Text.text = Kor_Text;
+            Item_Name.text = Kor_Name;
+        }
+        else
+        {
+            Item_Text.text = Eng_Text;
+            Item_Name.text = Eng_Name;
+        }
         if (GameObject.Find("Trade"))
         {
             Debug.Log("setitem");
@@ -46,9 +54,17 @@ public class UI_Item : MonoBehaviour
     public void SetPlantInfo()
     {
 
-        GameObject.Find("Build Name").GetComponent<Text>().text = Kor_Name;
-        GameObject.Find("Build Text").GetComponent<Text>().text = Kor_Text;
+        if (FindObjectOfType<GameSetting>().gameSettingData.iskor)
+        {
+            GameObject.Find("Build Name").GetComponent<Text>().text = Kor_Name;
+            GameObject.Find("Build Text").GetComponent<Text>().text = Kor_Text;
+        }
+        else
+        {
+            GameObject.Find("Build Name").GetComponent<Text>().text = Eng_Name;
+            GameObject.Find("Build Text").GetComponent<Text>().text = Eng_Text;
 
+        }
     }
     public void SetNum()
     {

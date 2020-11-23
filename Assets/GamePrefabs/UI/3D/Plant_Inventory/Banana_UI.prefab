@@ -246,13 +246,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kor_Name: "\uBC14\uB098\uB098"
   Eng_Name: Banana
-  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:500G"
-  Eng_Text: 'Growth period:7Days
-
-    Cost:500G'
+  Kor_Text: "\uAC00\uACA9:1000G"
+  Eng_Text: Cost:1000G
   t_num: {fileID: 16297863023610215}
   i_num: 0
-  cost: 500
+  cost: 1000
   item_plant_type: 4
 --- !u!114 &-102427326420502706
 MonoBehaviour:

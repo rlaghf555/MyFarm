@@ -161,12 +161,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   build_object: 7
+  item_plant_type: 0
   Kor_Name: "\uBCF5\uC22D\uC544"
   Eng_Name: Peach
-  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:500G"
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uC218\uD655\uB7C9:X5"
   Eng_Text: 'Growth period:7Days
 
-    Cost:500G'
+    Yield:X10'
+  t_num: {fileID: 0}
+  i_num: 0
+  farming_Control: {fileID: 0}
 --- !u!1 &4509413788347965894
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7234464841859338172}
   - component: {fileID: 4723933149540213734}
+  - component: {fileID: 5919962730596829624}
+  - component: {fileID: -8070653204007794680}
   m_Layer: 0
   m_Name: Quest 30
   m_TagString: Untagged
@@ -46,8 +48,8 @@ MonoBehaviour:
   Quest_Num: 30
   Kor_Name: "\uD76C\uADC0\uD55C \uD638\uBC15"
   Eng_Name: Rare Pumpkins
-  Kor_Text: "\uB85C\n\uB85C\uC988\uAC00 \uD76C\uADC0\uD55C \uD638\uBC15\uC744 \uCC3E\uACE0
-    \uC788\uB2E4.\n\n\uB378\uB9AC\uCE74\uD0C0 \uD638\uBC15 5\uAC1C \uAC00\uC838\uC624\uAE30"
+  Kor_Text: "\uB85C\uC988\n\uB85C\uC988\uAC00 \uD76C\uADC0\uD55C \uD638\uBC15\uC744
+    \uCC3E\uACE0 \uC788\uB2E4.\n\n\uB378\uB9AC\uCE74\uD0C0 \uD638\uBC15 5\uAC1C \uAC00\uC838\uC624\uAE30"
   Eng_Text: 'Rose
 
 
@@ -65,5 +67,45 @@ MonoBehaviour:
   Quest_Return_Contents: []
   Return_Gold: 0
   quest_state: 0
-  start_line: {fileID: 0}
-  end_line: {fileID: 0}
+  start_line: {fileID: 5919962730596829624}
+  end_line: {fileID: -8070653204007794680}
+--- !u!114 &5919962730596829624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 47
+  lines: []
+  korLines:
+  - "\uD14C\uC2A4\uD2B8"
+  engLines:
+  - Test
+  Next_Quest_ABLE_Num: 
+  Next_Quest_ACCEPT_Num: 
+--- !u!114 &-8070653204007794680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 48
+  lines: []
+  korLines:
+  - "\uD14C\uC2A4\uD2B8"
+  engLines:
+  - Test
+  Next_Quest_ABLE_Num: 
+  Next_Quest_ACCEPT_Num: 

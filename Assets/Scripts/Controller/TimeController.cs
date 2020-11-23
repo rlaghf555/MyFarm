@@ -11,11 +11,14 @@ public class TimeController : MonoBehaviour
     [SerializeField] private float endTime = 79200;
     private float nowTime;
     public Transform Directional_Light;
+    private CharacterData characterData;
     // Start is called before the first frame update
     void Start()
     {
         timeText=GameObject.Find("Time").GetComponent<Text>();
-        nowTime = startTime;
+        //nowTime = startTime;
+        characterData = FindObjectOfType<CharacterData>();
+        nowTime = characterData.time;
     }
     private void FixedUpdate()
     {
@@ -70,8 +73,17 @@ public class TimeController : MonoBehaviour
         }
         FindObjectOfType<CharacterData>().Save();
         FindObjectOfType<CharacterData>().Write();
+        FindObjectOfType<CharacterData>().time = startTime;
        FindObjectOfType<LevelLoader>().LoadLevel("MyFarm");
        
        
+    }
+    public void SetTime(float num)
+    {
+        nowTime = num;
+    }
+    public void SaveTime()
+    {
+        characterData.time = nowTime;
     }
 }

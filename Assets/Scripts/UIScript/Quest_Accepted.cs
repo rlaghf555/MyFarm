@@ -18,8 +18,14 @@ public class Quest_Accepted : MonoBehaviour
         quest = q;
         questController = FindObjectOfType<QuestController>();
         image.sprite = questController.portraits[q.End_Character];
-        quest_name.text = q.Kor_Name;
-        //quest_name.text = q.Eng_Name;
+        if (FindObjectOfType<GameSetting>().gameSettingData.iskor)
+        {
+            quest_name.text = q.Kor_Name;
+        }
+        else
+        {
+            quest_name.text = q.Eng_Name;
+        }
     }
     public void ShowQuest()
     {

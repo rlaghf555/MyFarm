@@ -32,7 +32,14 @@ public class Line : MonoBehaviour
     public virtual void SetScripts()
     {
         lines.Clear();
-        korLine();
+        if (FindObjectOfType<GameSetting>().gameSettingData.iskor)
+        {
+            korLine();
+        }
+        else
+        {
+            engLine();
+        }
         getline.SetScripts(lines, this);
     }
     public virtual void EndFunction()

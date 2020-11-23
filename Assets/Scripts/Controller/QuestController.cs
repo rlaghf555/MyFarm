@@ -29,8 +29,16 @@ public class QuestController : MonoBehaviour
     }
     public void ShowQuest(int Quest_Num)
     {
-        Quest_Name_Text.text = quests[Quest_Num].Kor_Name;
-        Quest_Text.text = quests[Quest_Num].Kor_Text;
+        if (FindObjectOfType<GameSetting>().gameSettingData.iskor)
+        {
+            Quest_Name_Text.text = quests[Quest_Num].Kor_Name;
+            Quest_Text.text = quests[Quest_Num].Kor_Text;
+        }
+        else
+        {
+            Quest_Name_Text.text = quests[Quest_Num].Eng_Name;
+            Quest_Text.text = quests[Quest_Num].Eng_Text;
+        }
         Quest_Client_Portrait.sprite = portraits[quests[Quest_Num].End_Character];
         Control_UI.SetActive(false);
         Quest_List.SetActive(false);
@@ -89,7 +97,6 @@ public class QuestController : MonoBehaviour
                 }
             }
         }
-        Debug.Log("NULL");
 
         return null;
     }

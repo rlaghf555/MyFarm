@@ -164,10 +164,10 @@ MonoBehaviour:
   item_plant_type: 18
   Kor_Name: "\uC624\uB80C\uC9C0"
   Eng_Name: Orange
-  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:500G"
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uC218\uD655\uB7C9:X5"
   Eng_Text: 'Growth period:7Days
 
-    Cost:500G'
+    Yield:X10'
   t_num: {fileID: 3562827473904068358}
   i_num: 0
   farming_Control: {fileID: 0}

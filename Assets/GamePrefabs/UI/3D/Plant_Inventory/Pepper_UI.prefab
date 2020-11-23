@@ -246,10 +246,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kor_Name: "\uD53C\uB9DD"
   Eng_Name: Bell Pepper
-  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:500G"
-  Eng_Text: 'Growth period:7Days
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:6\uC77C\n\uAC00\uACA9:250G"
+  Eng_Text: 'Growth period:6Days
 
-    Cost:500G'
+    Cost:250G'
   t_num: {fileID: 7537879480323737704}
   i_num: 0
   cost: 500

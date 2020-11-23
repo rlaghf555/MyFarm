@@ -257,12 +257,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kor_Name: "\uD1A0\uB9C8\uD1A0"
   Eng_Name: Tomato
-  Kor_Text: "\uB9DB\uC788\uB294 \uC0AC\uACFC\uB2E4\n\uC0AC\uC6A9: \uCCB4\uB825+10"
-  Eng_Text: 'This is delicious apple
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:300G"
+  Eng_Text: 'Growth period:
 
-    use: Health+10'
+    Cost:300G'
   t_num: {fileID: 756069344136521088}
   i_num: 0
+  cost: 300
   item_plant_type: 31
 --- !u!114 &7126370693510747606
 MonoBehaviour:

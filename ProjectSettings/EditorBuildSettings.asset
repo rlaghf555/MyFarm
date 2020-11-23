@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wheat Field.unity
     guid: 1c0a9e4e1773a284ead024333474d42d
+  - enabled: 1
+    path: Assets/Scenes/Fruit Farm.unity
+    guid: 181c44c6edf7f3049abe82575b9d092c
+  - enabled: 1
+    path: Assets/Scenes/Village.unity
+    guid: 0731b76948d6d0743bc300bab309b2af
   m_configObjects: {}

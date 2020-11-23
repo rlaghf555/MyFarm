@@ -158,12 +158,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kor_Name: "\uC0C1\uCD94"
   Eng_Name: Lettuce
-  Kor_Text: "\uB9DB\uC788\uB294 \uC0AC\uACFC\uB2E4\n\uC0AC\uC6A9: \uCCB4\uB825+10"
-  Eng_Text: 'This is delicious apple
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:3\uC77C\n\uAC00\uACA9:100G"
+  Eng_Text: 'Growth period:3Days
 
-    use: Health+10'
+    Cost:100G'
   t_num: {fileID: 2373921519585605928}
   i_num: 0
+  cost: 100
   item_plant_type: 16
 --- !u!114 &5218036412035411698
 MonoBehaviour:

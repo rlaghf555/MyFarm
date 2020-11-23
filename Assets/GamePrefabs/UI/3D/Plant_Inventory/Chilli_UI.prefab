@@ -246,13 +246,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kor_Name: "\uACE0\uCD94"
   Eng_Name: Chilli
-  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:7\uC77C\n\uAC00\uACA9:500G"
-  Eng_Text: 'Growth period:7Days
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:6\uC77C\n\uAC00\uACA9:200G"
+  Eng_Text: 'Growth period:6Days
 
-    Cost:500G'
+    Cost:200G'
   t_num: {fileID: 7537879480323737704}
   i_num: 0
-  cost: 500
+  cost: 200
   item_plant_type: 11
 --- !u!114 &1669302831878592089
 MonoBehaviour:

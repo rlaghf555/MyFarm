@@ -158,12 +158,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kor_Name: "\uAC00\uC9C0"
   Eng_Name: Eggplant
-  Kor_Text: "\uB9DB\uC788\uB294 \uC0AC\uACFC\uB2E4\n\uC0AC\uC6A9: \uCCB4\uB825+10"
-  Eng_Text: 'This is delicious apple
+  Kor_Text: "\uC131\uC7A5\uAE30\uAC04:3\uC77C\n\uC218\uD655\uB7C9:X5"
+  Eng_Text: 'Growth period:3Days
 
-    use: Health+10'
+    Yield:X5'
   t_num: {fileID: 5505855321727591565}
   i_num: 0
+  cost: 0
   item_plant_type: 14
 --- !u!114 &2662567793181867484
 MonoBehaviour:

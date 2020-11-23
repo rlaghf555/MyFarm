@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7234464841859338172}
   - component: {fileID: 4723933149540213734}
+  - component: {fileID: 3215387365007407656}
+  - component: {fileID: -2820429904147005880}
   m_Layer: 0
   m_Name: Quest 17
   m_TagString: Untagged
@@ -64,5 +66,45 @@ MonoBehaviour:
   Quest_Return_Contents: []
   Return_Gold: 3000
   quest_state: 0
-  start_line: {fileID: 0}
-  end_line: {fileID: 0}
+  start_line: {fileID: 3215387365007407656}
+  end_line: {fileID: -2820429904147005880}
+--- !u!114 &3215387365007407656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 23
+  lines: []
+  korLines:
+  - "\uD14C\uC2A4\uD2B8"
+  engLines:
+  - Test
+  Next_Quest_ABLE_Num: 
+  Next_Quest_ACCEPT_Num: 
+--- !u!114 &-2820429904147005880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7423964518283820224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44959e738ceee2142ba3649eea0ba04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line_Num: 24
+  lines: []
+  korLines:
+  - "\uD14C\uC2A4\uD2B8"
+  engLines:
+  - Test
+  Next_Quest_ABLE_Num: 
+  Next_Quest_ACCEPT_Num: 
