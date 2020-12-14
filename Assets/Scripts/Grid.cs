@@ -27,4 +27,8 @@ public class Grid : MonoBehaviour
         //GetComponent<SpriteRenderer>().color = Color.white;
         GetComponent<Outline>().OutlineColor = Color.white;
     }
+    public void Invisible()
+    {
+        GetComponent<Outline>().OutlineColor = new Color(0,0,0,0);
+    }
 }

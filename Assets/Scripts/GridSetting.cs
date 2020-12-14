@@ -30,11 +30,7 @@ public class GridSetting : MonoBehaviour
         //SetCollectableObject();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
     /*
     private void OnDrawGizmos()
     {
@@ -105,8 +101,10 @@ public class GridSetting : MonoBehaviour
         {
             for (int z = 0; z < z_size; z++)
             {
+                //mainArray[x].subArray[z].GetComponentInChildren<Grid>().buildable = true;
                 mainArray[x].subArray[z].GetComponentInChildren<Grid>().UnSelected();
             }
         }
+
     }
 }

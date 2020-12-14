@@ -8,4 +8,5 @@ public class Tree : MonoBehaviour
     public Mesh grownmesh;
     public int growth_day;
     public int passed_day;
+    public ITEM_PLANT_TYPE item_type;
 }

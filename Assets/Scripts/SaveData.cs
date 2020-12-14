@@ -40,4 +40,14 @@ public class SaveData
         quests = new List<Quest_Save>();
         grid_Saves = new List<Grid_Save>();
     }
+
+    public UI_ITEM_PLANT_INFO GetItem(ITEM_PLANT_TYPE item_type)
+    {
+        foreach(UI_ITEM_PLANT_INFO item in items)
+        {
+            if (item.itemType == item_type)
+                return item;
+        }
+        return null;
+    }
 }

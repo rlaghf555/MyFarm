@@ -18,6 +18,7 @@ TagManager:
   - Building
   - Crop
   - Dirt
+  - Junk
   layers:
   - Default
   - TransparentFX

@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class UI_EmptyText : MonoBehaviour
 {
-    public GameObject content;
-    private MeshRenderer meshRenderer;
+    public GameObject text;
     // Start is called before the first frame update
-    void Start()
-    {
-        meshRenderer = GetComponent<MeshRenderer>();
-    }
 
-    // Update is called once per frame
-    void Update()
+
+
+    private void FixedUpdate()
     {
-        if (content.transform.childCount == 0)
+        SetText();
+    }
+    public void SetText()
+    {
+        if (transform.childCount > 0)
         {
-            meshRenderer.enabled = true;
+            text.SetActive(false);
         }
         else
-            meshRenderer.enabled = false;
+            text.SetActive(true);
     }
+   
 }

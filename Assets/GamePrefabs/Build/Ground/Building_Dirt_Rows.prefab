@@ -53,6 +53,7 @@ MonoBehaviour:
   size_x: 1
   size_z: 2
   bound: {fileID: 484722516632687734}
+  cost: 100
   plant_type: 0
   Crops:
   - {fileID: 0}
@@ -114,7 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0cae966f95b0894cb6a98c616e0ea31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Line_Num: 0
   lines: []
+  korLines: []
+  engLines: []
 --- !u!1 &7170073072168448834
 GameObject:
   m_ObjectHideFlags: 0

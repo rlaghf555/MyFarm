@@ -12,5 +12,6 @@ public class Building_Object : MonoBehaviour
     public int size_x;
     public int size_z;
     public BoxCollider bound;
+    public int cost;
     // Start is called before the first frame update 
 }

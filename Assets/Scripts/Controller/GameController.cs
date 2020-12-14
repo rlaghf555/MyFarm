@@ -18,6 +18,9 @@ public class GameController : MonoBehaviour
     public GetLine ui_script;
     public CharacterSetting characterSetting;
     public UI_Inventory ui_inventory;
+    public GameObject RemoveJunkUI;
+    public GameObject JunkMessage_Resume;
+    public Farming_Control farming_control;
     private GameObject collectableObject;
     private ACT_BUTTON_STATE actButtonState;
 

@@ -26,6 +26,15 @@ public class QuestLine : Line
                     q.quest_state = QUEST_STATE.ACCEPT;
                 }
         }
+        Quest quest = GetComponent<Quest>();
+        if(quest.quest_state == QUEST_STATE.ACCEPT)
+        {
+            quest.QueastAccept();
+        }
+        if(quest.quest_state == QUEST_STATE.CLEAR)
+        {
+            quest.QuestClear();
+        }
     }
     
 }

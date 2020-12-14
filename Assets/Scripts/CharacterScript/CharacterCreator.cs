@@ -11,6 +11,7 @@ public class CharacterCreator : MonoBehaviour
     public int characterMeshIndex;
     public int materialIndex;
     public string filename;
+    public SaveData defaultData;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +23,10 @@ public class CharacterCreator : MonoBehaviour
         {
             characterMesh[i].SetActive(false);
         }
+        defaultData = GameObject.Find("DefaultData").GetComponent<CharacterData>().inGameData;
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     public void OnheadIndexPlus()
     {
         onHeadIndex++;
@@ -92,11 +91,14 @@ public class CharacterCreator : MonoBehaviour
     }
     public void CreateCharacter()
     {
-        SaveData saveData = new SaveData();
+        SaveData saveData = defaultData;
         saveData.onHead = onHeadIndex;
         saveData.characterMesh = characterMeshIndex;
         saveData.characterMaterial = materialIndex;
         saveData.filename = filename;
+        //saveData.gold = defaultData.gold;
+        //saveData.grid_Saves = defaultData.grid_Saves;
+        //saveData.items = defaultData.items;
         SaveSystem.SavePlayer(filename, saveData);
     }
 }

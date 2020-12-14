@@ -18,9 +18,12 @@ public class SettingUI : MonoBehaviour
     {
         gameSetting = FindObjectOfType<GameSetting>();
         gameSetting.Load();
-        Set();
     }
+    private void OnEnable()
+    {
+        Set();
 
+    }
 
     public void Pause()
     {

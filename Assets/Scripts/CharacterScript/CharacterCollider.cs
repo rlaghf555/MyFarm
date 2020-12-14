@@ -11,16 +11,7 @@ public class CharacterCollider : MonoBehaviour
     public GameObject TradeButton;
     public QuestController questController;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Grid")
@@ -31,7 +22,7 @@ public class CharacterCollider : MonoBehaviour
         //{
         //    OpenScript();
         //}
-        if(colGameObject.tag == "NPC"||colGameObject.tag == "Collectable"||colGameObject.tag=="Sign"||colGameObject.tag=="Building")
+        if(colGameObject.tag == "NPC"||colGameObject.tag == "Collectable"||colGameObject.tag=="Sign"||colGameObject.tag=="Building" || colGameObject.tag == "Junk")
         {
             openScriptButton.SetActive(true);
         }
@@ -46,7 +37,7 @@ public class CharacterCollider : MonoBehaviour
             return;
         if (colGameObject == null)
             return;
-        if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable" || colGameObject.tag == "Sign" || colGameObject.tag == "Building")
+        if (colGameObject.tag == "NPC" || colGameObject.tag == "Collectable" || colGameObject.tag == "Sign" || colGameObject.tag == "Building" || colGameObject.tag == "Junk")
         {            
             openScriptButton.SetActive(false);
             TradeButton.SetActive(false);
@@ -88,6 +79,12 @@ public class CharacterCollider : MonoBehaviour
         {
             colGameObject.GetComponent<Animator>().SetTrigger("Talk_End");
             //colGameObject.GetComponent<LookCharacter>().enabled = false;
+        }
+    }
+    public void RemoveJunk() { 
+        if(colGameObject.tag == "Junk")
+        {
+            colGameObject.GetComponent<Junk>().Remove();
         }
     }
 }

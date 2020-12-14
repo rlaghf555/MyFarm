@@ -17,7 +17,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadGame()
     {
         GetComponent<Animator>().SetTrigger("Fade_Out");
-        GameObject newgameObject = GameObject.FindGameObjectWithTag("Data");
+        GameObject newgameObject = GameObject.Find("CharacterData");
         newgameObject.GetComponent<CharacterData>().inGameData = saveData;
         DontDestroyOnLoad(newgameObject);
     }

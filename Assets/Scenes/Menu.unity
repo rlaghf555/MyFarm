@@ -122,126 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &8484124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8484126}
-  - component: {fileID: 8484125}
-  m_Layer: 0
-  m_Name: CharacterData
-  m_TagString: Data
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &8484125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8484124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9c6013fed5b4db48ae95db94b84154e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inGameData:
-    onHead: 0
-    characterMesh: 0
-    characterMaterial: 0
-    items:
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    - itemType: 0
-      num: 0
-    filename: 
-    quests: []
-    grid_Saves: []
-    gold: 0
-  time: 21600
-  BeforeScene: 
---- !u!4 &8484126
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8484124}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1052.9443, y: 569.3749, z: -4.9707212}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &9483565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3984,6 +3864,81 @@ MonoBehaviour:
   characterMeshIndex: 0
   materialIndex: 0
   filename: 
+  defaultData:
+    onHead: 0
+    characterMesh: 0
+    characterMaterial: 0
+    items:
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    filename: 
+    quests: []
+    grid_Saves: []
+    gold: 500
 --- !u!1001 &810727338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4946,6 +4901,146 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fdf18c58b725a2f469593ece1786d307, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 774bd4c582a137c40a49a7931be665ce, type: 3}
+--- !u!1 &1022077297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1022077299}
+  - component: {fileID: 1022077298}
+  m_Layer: 0
+  m_Name: DefaultData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1022077298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022077297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c6013fed5b4db48ae95db94b84154e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inGameData:
+    onHead: 0
+    characterMesh: 0
+    characterMaterial: 0
+    items:
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    filename: 
+    quests: []
+    grid_Saves:
+    - build_object: 10
+      grid_x: 0
+      grid_z: 7
+      passed_day: 0
+      plant_type: 0
+    - build_object: 11
+      grid_x: 15
+      grid_z: 0
+      passed_day: 0
+      plant_type: 0
+    - build_object: 12
+      grid_x: 24
+      grid_z: 8
+      passed_day: 0
+      plant_type: 0
+    - build_object: 13
+      grid_x: 33
+      grid_z: 0
+      passed_day: 0
+      plant_type: 0
+    gold: 1000
+  time: 21600
+  BeforeScene: 
+--- !u!4 &1022077299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022077297}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7395351, y: 1004.3568, z: 4.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1028467353
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6721,6 +6816,146 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1590454629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1597335412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1597335414}
+  - component: {fileID: 1597335413}
+  m_Layer: 0
+  m_Name: CharacterData
+  m_TagString: Data
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1597335413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597335412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c6013fed5b4db48ae95db94b84154e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inGameData:
+    onHead: 0
+    characterMesh: 0
+    characterMaterial: 0
+    items:
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    - itemType: 0
+      num: 0
+    filename: 
+    quests: []
+    grid_Saves:
+    - build_object: 10
+      grid_x: 0
+      grid_z: 7
+      passed_day: 0
+      plant_type: 0
+    - build_object: 11
+      grid_x: 15
+      grid_z: 0
+      passed_day: 0
+      plant_type: 0
+    - build_object: 12
+      grid_x: 24
+      grid_z: 8
+      passed_day: 0
+      plant_type: 0
+    - build_object: 13
+      grid_x: 33
+      grid_z: 0
+      passed_day: 0
+      plant_type: 0
+    gold: 1000
+  time: 21600
+  BeforeScene: 
+--- !u!4 &1597335414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597335412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7395351, y: 1004.3568, z: 4.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602841887
 GameObject:
   m_ObjectHideFlags: 0
@@ -8018,7 +8253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1808314613
 MonoBehaviour:

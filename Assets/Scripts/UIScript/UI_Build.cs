@@ -31,8 +31,9 @@ public class UI_Build : MonoBehaviour
     }
     public void onclick()
     {
-        farming_Control.FarmBuildSetting(build_object);
+        farming_Control.FarmBuildSetting(this);
     }
+    
     public void SetBuildInfo()
     {
         if (FindObjectOfType<GameSetting>().gameSettingData.iskor)

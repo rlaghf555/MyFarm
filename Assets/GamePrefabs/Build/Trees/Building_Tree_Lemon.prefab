@@ -118,6 +118,7 @@ MonoBehaviour:
   grownmesh: {fileID: 4300000, guid: df519235b48e1194881086017b2a19e8, type: 3}
   growth_day: 7
   passed_day: 0
+  item_type: 15
 --- !u!65 &1075077227905848732
 BoxCollider:
   m_ObjectHideFlags: 0

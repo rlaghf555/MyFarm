@@ -105,7 +105,7 @@ public class Quest : MonoBehaviour
         }
         FindObjectOfType<CharacterData>().inGameData.gold += Return_Gold;
     }
-    public void QuestRecive()//퀘스트 받았을때 호출
+    public void QueastAccept()//퀘스트 받았을때 호출
     {
         
         foreach (Quest_Content qrc in Quest_Receive_Contents)

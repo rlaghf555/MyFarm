@@ -6,18 +6,9 @@ public class UI_Trade : MonoBehaviour
     private UI_Item trading_item;
     private UI_Inventory my_inventory;
     private UI_NPC_Inventory npc_inventory;
-    private bool is_sell;
+    private bool is_sell = true;
     // Use this for initialization
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+ 
     public void setItem(UI_Item r_value)
     {
         trading_item = r_value;
@@ -42,7 +33,6 @@ public class UI_Trade : MonoBehaviour
                     //Debug.Log("1:"+ mu.num);
                     if (mu.num > 0)
                     {
-                        Debug.Log("2");
 
                         mu.num--;
                         trading_item.i_num--;
@@ -113,6 +103,7 @@ public class UI_Trade : MonoBehaviour
 
         }
         FindObjectOfType<UI_Gold>().SetGoldText();
+
     }
     public void Is_Sell(bool r_value)
     {
